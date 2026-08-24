@@ -5143,6 +5143,9 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
         justify-content: center;
         gap: 14px;
     }
+    header nav ul li {
+        padding-top: 10px;
+    }
 }
  
 /* ---------- КНОПКА "НАВЕРХ" ---------- */
@@ -5431,6 +5434,21 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
         width: 100%;
     }
 }
+
+
+/* адаптив: колонка справа остаётся справа на любом экране, просто сужается */
+  @media (max-width: 860px){
+    .layout{
+      grid-template-columns: 1fr 220px;
+      gap:20px;
+      padding:32px 4vw 60px;
+    }
+    section h2{ font-size:1.35rem; }
+    .badge-block{ padding:12px; }
+    nav.toc{ padding:12px; }
+    nav.toc h3{ font-size:.8rem; }
+    nav.toc a{ font-size:.82rem; padding:6px 8px; }
+  }
  
 /* ---------- КОНТАКТЫ (contacts.html) ---------- */
 /* картинка карты с отрицательным margin-bottom:-100px наезжает
