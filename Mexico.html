@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KINDLAND</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="CSS/main.css">
     <link rel="icon" type="image/jpg" href="imags/favicon.jpg">
 </head>
 <body>
@@ -17,12 +17,12 @@
             <nav>
                 <ul>
                     <!--класс актив добавляет полосочку-->
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about.html">О сайте</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О сайте</a></li>
                     <li><a href="страны.html">Страны</a></li>
                     <li><a href="новости.html">Новости</a></li>
                     <!--класс бтн сделает кнопку-->
-                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                    <li class="btn"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </header>
@@ -123,9 +123,15 @@
 <p>Страна соседствует с тремя государствами — одним на севере и двумя на юге:</p>
 
 <div class="geo-neighbors">
-    <div class="geo-neighbor"><span class="geo-flag-emoji">🇺🇸</span> <a href="United States.html">США</a></div>
-    <div class="geo-neighbor"><span class="geo-flag-emoji">🇬🇹</span> <a href="#">Гватемала</a></div>
-    <div class="geo-neighbor"><span class="geo-flag-emoji">🇧🇿</span> <a href="#">Белиз</a></div>
+    <a href="United States.html">
+    <div class="geo-neighbor"><span class="geo-flag-emoji">🇺🇸</span>США</div>
+    </a>
+    <a href="#">
+    <div class="geo-neighbor"><span class="geo-flag-emoji">🇬🇹</span>Гватемала</div>
+    </a>
+    <a href="#">
+    <div class="geo-neighbor"><span class="geo-flag-emoji">🇧🇿</span>Белиз</div>
+    </a>
 </div>
 
 <h2>Моря и океаны у берегов Мексики</h2>
@@ -207,9 +213,9 @@
         </div>
 
 <div class="mxm-wrap" id="regionsmap">
-  <div class="centr">
+    <div class="centr">
             <h1 id="karta">Интерактивная карта регионов</h1>
-  </div>
+    </div>
             <p class="subtitle">Наведи курсор на плитку — появится столица штата и любопытный факт о нём. Кнопки ниже подсвечивают целую группу регионов.</p>
 
             <div class="mxm-legend" id="mxmLegend"></div>
