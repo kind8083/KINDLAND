@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINDLAND</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    
+    <div class="wrapper" id="pageTop">
+        <header class="container">
+            <a href="index.html">
+            <span class="logo">KINDland</span>
+            </a>
+            <nav>
+                <ul>
+                    <!--класс актив добавляет полосочку-->
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О сайте</a></li>
+                    <li><a href="страны.html">Страны</a></li>
+                    <li><a href="новости.html">Новости</a></li>
+                    <!--класс бтн сделает кнопку-->
+                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+
+    <button class="nav-back-btn" onclick="navBackOrHome()">
+    <span class="nav-back-arrow">←</span>
+    <span>Назад</span>
+        </button>
+
+
+
+        <script>
+function navBackOrHome() {
+    // если есть история переходов внутри сайта — идём назад
+    if (document.referrer && document.referrer.includes(window.location.hostname)) {
+    window.history.back();
+    } else {
+      // если открыли страницу напрямую (например, по прямой ссылке) — на главную
+    window.location.href = 'index.html';
+    }
+}
+</script>
+<div class="centr">
+<h1>Страны и территории и их население</h1>
+</div>
+    <div class="tabl">
+    <table>
+    
+        <tr>
+            <th>№</th>
+            <th>Страна или территория</th>
+            <th>Население</th>
+            <th>% от населения Земли</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Мир</td>
+            <td>8 118 835 999 </td>
+            <td>100.00%</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Индия</td>
+            <td>1 450 935 791 </td>
+            <td>17.87%</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Китай</td>
+            <td>1 419 321 278 </td>
+            <td>17.48%</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>США</td>
+            <td>341 814 420 </td>
+            <td>4.21%</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Индонезия</td>
+            <td>279 798 049 </td>
+            <td>3.45%</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Пакистан</td>
+            <td>245 209 815 </td>
+            <td>3.02%</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Нигерия</td>
+            <td>229 152 217	</td>
+            <td>2.82%</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Бразилия</td>
+            <td>211 999 000	</td>
+            <td>2.61%</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Бангладеш</td>
+            <td>174 701 211</td>
+            <td>2.15%</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Россия</td>
+            <td>143 957 079</td>
+            <td>1.77%</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Эфиопия</td>
+            <td>129 719 719</td>
+            <td>1.6%</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Мексика</td>
+            <td>129 388 467</td>
+            <td>1.59%</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Япония</td>
+            <td>122 631 432</td>
+            <td>1.51%</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Филиппины</td>
+            <td>119 106 224</td>
+            <td>1.47%</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Египет</td>
+            <td>114 484 252</td>
+            <td>1.41%</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>ДРК</td>
+            <td>105 625 114</td>
+            <td>1.3%</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Вьетнам</td>
+            <td>100 987 686</td>
+            <td>1.24%</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Турция</td>
+            <td>85 824 854</td>
+            <td>1.0571%</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Германия</td>
+            <td>83 294 633</td>
+            <td>1.0259%</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Таиланд</td>
+            <td>71 885 799</td>
+            <td>0.8854%</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Танзания</td>
+            <td>69 419 073</td>
+            <td>0.855%</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Великобритания</td>
+            <td>67 962 000</td>
+            <td>0.8371%</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Франция</td>
+            <td>64 882 000</td>
+            <td>0.7992%</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>ЮАР</td>
+            <td>63 020 000</td>
+            <td>0.7762%</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Италия</td>
+            <td>59 342 867</td>
+            <td>0.7309%</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Кения</td>
+            <td>56 203 030</td>
+            <td>0.6923%</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Мьянма</td>
+            <td>54 500 000</td>
+            <td>0.6713%</td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>Колумбия</td>
+            <td>52 340 500</td>
+            <td>0.6447%</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>Республика Корея</td>
+            <td>51 717 590</td>
+            <td>0.637%</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>Уганда</td>
+            <td>49 924 252</td>
+            <td>0.6149%</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>Судан</td>
+            <td>49 358 228</td>
+            <td>0.6079%</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>Испания</td>
+            <td>47 473 500</td>
+            <td>0.5847%</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>Ирак</td>
+            <td>46 523 657</td>
+            <td>0.573%</td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>Алжир</td>
+            <td>46 278 500</td>
+            <td>0.57%</td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>Канада</td>
+            <td>41 288 599</td>
+            <td>0.5086%</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>Йемен</td>
+            <td>40 580 000</td>
+            <td>0.4998%</td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td>Афганистан</td>
+            <td>40 121 552</td>
+            <td>0.4942%</td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>Польша</td>
+            <td>38 539 201</td>
+            <td>0.4747%</td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td>Марокко</td>
+            <td>38 081 173</td>
+            <td>0.469%</td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td>Ангола</td>
+            <td>37 804 634</td>
+            <td>0.4656%</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>Узбекистан</td>
+            <td>37 130 000</td>
+            <td>0.4573%</td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td>Украина</td>
+            <td>35 800 000</td>
+            <td>0.4409%</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>Перу</td>
+            <td>34 683 500</td>
+            <td>0.4272%</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>Малайзия</td>
+            <td>34 672 000</td>
+            <td>0.4271%</td>
+        </tr>
+        <tr>
+            <td>44</td>
+            <td>Гана</td>
+            <td>34 430 000</td>
+            <td>0.4241%</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>Мозамбик</td>
+            <td>34 130 000</td>
+            <td>0.4204%</td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>Саудовская Аравия</td>
+            <td>33 962 757</td>
+            <td>0.4183%</td>
+        </tr>
+        <tr>
+            <td>47</td>
+            <td>Кот-д’Ивуар</td>
+            <td>31 934 230</td>
+            <td>0.3933%</td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td>Мадагаскар</td>
+            <td>31 056 500</td>
+            <td>0.3825%</td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td>Непал</td>
+            <td>29 700 000</td>
+            <td>0.3658%</td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td>Камерун</td>
+            <td>29 120 000</td>
+            <td>0.3587%</td>
+        </tr>
+        <tr>
+            <td>51</td>
+            <td>Венесуэла</td>
+            <td>28 405 543</td>
+            <td>0.3499%</td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td>Нигер</td>
+            <td>28 200 000</td>
+            <td>0.3473%</td>
+        </tr>
+        <tr>
+            <td>53</td>
+            <td>Австралия</td>
+            <td>27 189 000</td>
+            <td>0.3349%</td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td>КНДР</td>
+            <td>26 244 500</td>
+            <td>0.3233%</td>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td>Сирия</td>
+            <td>24 670 000</td>
+            <td>0.3039%</td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td>Мали</td>
+            <td>24 015 789</td>
+            <td>0.2958%</td>
+        </tr>
+        <tr>
+            <td>57</td>
+            <td>Буркина-Фасо</td>
+            <td>23 550 000</td>
+            <td>0.2901%</td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td>Китайская Республика</td>
+            <td>23 400 000</td>
+            <td>0.2882%</td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td>Шри-Ланка</td>
+            <td>21 920 000</td>
+            <td>0.27%</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td>Замбия</td>
+            <td>21 700 000</td>
+            <td>0.2673%</td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td>Малави</td>
+            <td>21 660 000</td>
+            <td>0.2668%</td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td>Чад</td>
+            <td>20 300 000</td>
+            <td>0.25%</td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td>Казахстан</td>
+            <td>20 159 707</td>
+            <td>0.2483%</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td>Чили</td>
+            <td>19 660 000</td>
+            <td>0.2422%</td>
+        </tr>
+        <tr>
+            <td>65</td>
+            <td>Сомали</td>
+            <td>19 010 000</td>
+            <td>0.2341%</td>
+        </tr>
+        <tr>
+            <td>66</td>
+            <td>Румыния</td>
+            <td>19 000 000</td>
+            <td>0.234%</td>
+        </tr>
+        <tr>
+            <td>67</td>
+            <td>Сенегал</td>
+            <td>18 800 000</td>
+            <td>0.2316%</td>
+        </tr>
+        <tr>
+            <td>68</td>
+            <td>Гватемала</td>
+            <td>18 410 000</td>
+            <td>0.2268%</td>
+        </tr>
+        <tr>
+            <td>69</td>
+            <td>Нидерланды</td>
+            <td>18 230 000</td>
+            <td>0.2245%</td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td>Эквадор</td>
+            <td>18 140 000</td>
+            <td>0.2234%</td>
+        </tr>
+        <tr>
+            <td>71</td>
+            <td>Камбоджа</td>
+            <td>17 640 000</td>
+            <td>0.2173%</td>
+        </tr>
+        <tr>
+            <td>72</td>
+            <td>Зимбабве</td>
+            <td>16 630 000</td>
+            <td>0.2048%</td>
+        </tr>
+        <tr>
+            <td>73</td>
+            <td>Гвинея</td>
+            <td>14 530 000</td>
+            <td>0.179%</td>
+        </tr>
+        <tr>
+            <td>74</td>
+            <td>Бенин</td>
+            <td>14 462 724</td>
+            <td>0.1781%</td>
+        </tr>
+        <tr>
+            <td>75</td>
+            <td>Руанда</td>
+            <td>14 230 000</td>
+            <td>0.1753%</td>
+        </tr>
+        <tr>
+            <td>76</td>
+            <td>Бурунди</td>
+            <td>14 047 786</td>
+            <td>0.173%</td>
+        </tr>
+        <tr>
+            <td>77</td>
+            <td>Боливия</td>
+            <td>12 413 315</td>
+            <td>0.1529%</td>
+        </tr>
+        <tr>
+            <td>78</td>
+            <td>Тунис</td>
+            <td>12 277 109</td>
+            <td>0.1512%</td>
+        </tr>
+        <tr>
+            <td>79</td>
+            <td>Гаити</td>
+            <td>11 773 000</td>
+            <td>0.145%</td>
+        </tr>
+        <tr>
+            <td>80</td>
+            <td>Бельгия</td>
+            <td>11 715 774</td>
+            <td>0.1443%</td>
+        </tr>
+        <tr>
+            <td>81</td>
+            <td>Иордания</td>
+            <td>11 531 000</td>
+            <td>0.142%</td>
+        </tr>
+        <tr>
+            <td>82</td>
+            <td>Доминиканская Республика</td>
+            <td>11 428 000	</td>
+            <td>0.1408%</td>
+        </tr>
+        <tr>
+            <td>83</td>
+            <td>ОАЭ</td>
+            <td>11 027 000</td>
+            <td>0.1358%</td>
+        </tr>
+        <tr>
+            <td>84</td>
+            <td>Куба</td>
+            <td>10 979 783</td>
+            <td>0.1352%</td>
+        </tr>
+        <tr>
+            <td>85</td>
+            <td>Гондурас</td>
+            <td>10 830 000</td>
+            <td>0.1334%</td>
+        </tr>
+        <tr>
+            <td>86</td>
+            <td>Швеция</td>
+            <td>10 606 999</td>
+            <td>0.1306%</td>
+        </tr>
+        <tr>
+            <td>87</td>
+            <td>Папуа — Новая Гвинея</td>
+            <td>10 577 000</td>
+            <td>0.1303%</td>
+        </tr>
+        <tr>
+            <td>88</td>
+            <td>Чехия</td>
+            <td>10 500 000</td>
+            <td>0.1293%</td>
+        </tr>
+        <tr>
+            <td>89</td>
+            <td>Португалия</td>
+            <td>10 425 000</td>
+            <td>0.1284%</td>
+        </tr>
+        <tr>
+            <td>90</td>
+            <td>Таджикистан</td>
+            <td>10 339 000</td>
+            <td>0.1273%</td>
+        </tr>
+        <tr>
+            <td>91</td>
+            <td>Азербайджан</td>
+            <td>10 336 577</td>
+            <td>0.1273%</td>
+        </tr>
+        <tr>
+            <td>92</td>
+            <td>Греция</td>
+            <td>10 137 000</td>
+            <td>0.1249%</td>
+        </tr>
+        <tr>
+            <td>93</td>
+            <td>Венгрия</td>
+            <td>9 690 000</td>
+            <td>0.1194%</td>
+        </tr>
+        <tr>
+            <td>94</td>
+            <td>Того</td>
+            <td>9 515 000</td>
+            <td>0.1172%</td>
+        </tr>
+        <tr>
+            <td>95</td>
+            <td>Израиль</td>
+            <td>9 387 000</td>
+            <td>0.1156%</td>
+        </tr>
+        <tr>
+            <td>96</td>
+            <td>Белоруссия</td>
+            <td>9 056 696</td>
+            <td>0.1116%</td>
+        </tr>
+        <tr>
+            <td>97</td>
+            <td>Швейцария</td>
+            <td>8 922 000</td>
+            <td>0.1099%</td>
+        </tr>
+        <tr>
+            <td>98</td>
+            <td>Сьерра-Леоне</td>
+            <td>8 642 000</td>
+            <td>0.1064%</td>
+        </tr>
+        <tr>
+            <td>99</td>
+            <td>Лаос</td>
+            <td>7 770 000</td>
+            <td>0.0957%</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>Туркменистан</td>
+            <td>7 494 000</td>
+            <td>0.0923%</td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Гонконг</td>
+            <td>7 415 000</td>
+            <td>0.0913%</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Ливия</td>
+            <td>7 381 000</td>
+            <td>0.0909%</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Киргизия</td>
+            <td>7 186 000</td>
+            <td>0.0885%</td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>Парагвай</td>
+            <td>6 929 000</td>
+            <td>0.0853%</td>
+        </tr>
+        <tr>
+            <td>105</td>
+            <td>Никарагуа</td>
+            <td>6 916 000</td>
+            <td>0.0852%</td>
+        </tr>
+        <tr>
+            <td>106</td>
+            <td>Болгария</td>
+            <td>6 758 000</td>
+            <td>0.0832%</td>
+        </tr>
+        <tr>
+            <td>107</td>
+            <td>Сербия</td>
+            <td>6 736 000</td>
+            <td>0.083%</td>
+        </tr>
+        <tr>
+            <td>108</td>
+            <td>Сальвадор</td>
+            <td>6 338 000</td>
+            <td>0.0781%</td>
+        </tr>
+        <tr>
+            <td>109</td>
+            <td>Республика Конго</td>
+            <td>6 306 852</td>
+            <td>0.0777%</td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td>Дания</td>
+            <td>5 977 000</td>
+            <td>0.0736%</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>ЦАР</td>
+            <td>5 915 627</td>
+            <td>0.0729%</td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td>Сингапур</td>
+            <td>5 832 000</td>
+            <td>0.0718%</td>
+        </tr>
+        <tr>
+            <td>113</td>
+            <td>Ливан</td>
+            <td>5 806 000</td>
+            <td>0.0715%</td>
+        </tr>
+        <tr>
+            <td>114</td>
+            <td>Словакия</td>
+            <td>5 790 099</td>
+            <td>0.0713%</td>
+        </tr>
+        <tr>
+            <td>115</td>
+            <td>Финляндия</td>
+            <td>5 617 000</td>
+            <td>0.0692%</td>
+        </tr>
+        <tr>
+            <td>116</td>
+            <td>Норвегия</td>
+            <td>5 577 000</td>
+            <td>0.0687%</td>
+        </tr>
+        <tr>
+            <td>117</td>
+            <td>Либерия</td>
+            <td>5 536 949</td>
+            <td>0.0682%</td>
+        </tr>
+        <tr>
+            <td>118</td>
+            <td>Государство Палестина</td>
+            <td>5 494 963</td>
+            <td>0.0677%</td>
+        </tr>
+        <tr>
+            <td>119</td>
+            <td>Новая Зеландия</td>
+            <td>5 269 939</td>
+            <td>0.0649%</td>
+        </tr>
+        <tr>
+            <td>120</td>
+            <td>Коста-Рика</td>
+            <td>5 246 714</td>
+            <td>0.0646%</td>
+        </tr>
+        <tr>
+            <td>121</td>
+            <td>Ирландия</td>
+            <td>5 205 397</td>
+            <td>0.0641%</td>
+        </tr>
+        <tr>
+            <td>122</td>
+            <td>Мавритания</td>
+            <td>4 993 922</td>
+            <td>0.0615%</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>Оман</td>
+            <td>4 740 688</td>
+            <td>0.0584%</td>
+        </tr>
+        <tr>
+            <td>124</td>
+            <td>Панама</td>
+            <td>4 527 961</td>
+            <td>0.0558%</td>
+        </tr>
+        <tr>
+            <td>125</td>
+            <td>Кувейт</td>
+            <td>4 349 380</td>
+            <td>0.0536%</td>
+        </tr>
+        <tr>
+            <td>126</td>
+            <td>Хорватия</td>
+            <td>3 888 889</td>
+            <td>0.0479%</td>
+        </tr>
+        <tr>
+            <td>127</td>
+            <td>Эритрея</td>
+            <td>3 817 651</td>
+            <td>0.047%</td>
+        </tr>
+        <tr>
+            <td>128</td>
+            <td>Грузия</td>
+            <td>3 728 573</td>
+            <td>0.0459%</td>
+        </tr>
+        <tr>
+            <td>129</td>
+            <td>Монголия</td>
+            <td>3 492 827</td>
+            <td>0.043%</td>
+        </tr>
+        <tr>
+            <td>130</td>
+            <td>Уругвай</td>
+            <td>3 423 108</td>
+            <td>0.0422%</td>
+        </tr>
+        
+    </table>
+    </div>
+
+
+
+</div>
+    </div>
+
+
+
+    <footer>
+        <div class="blocks container">
+            <div>
+            <span class="logo">KINDland</span>
+            <p>Этот сайт, посвещенный странам мира.<br>Разработано Алексеем Добрым</p>
+            
+            <br>
+                kindland.com
+            
+            </div>
+        <div>
+            <h4>О нас</h4>
+            <ul>
+                <li><a href="about.html">Наша миссия</a></li>
+                <li><a href="Об авторе.html">Об авторе</a></li>
+                <li><a href="страны.html">Все страны</a></li>
+                <li><a href="новости.html">Новости</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Обратная связь</h4>
+            <p>Email:dobrodeevalekse2@gmail.com</p>
+            <p><a href="https://vk.ru/kiiiiind">VK</a></p>
+            <p><a href="https://web.telegram.org/k/#@kiiiiiiiiiind">Telegram</a></p>
+            <p><a href="https://www.instagram.com/kind_8083?igsh=MXV6c3pkeW9idGJlaA%3D%3D&utm_source=qr">Instagram</a></p>
+        </div>
+        </div>
+        <hr>
+        <p>® 2026 KINDLAND | Все права защищены</p>
+    </footer>
+</body>
+</html>

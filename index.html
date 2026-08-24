@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINDLAND</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="main.js">
+    
+</head>
+
+<body>
+    
+    <!--класс врапер фон-->
+
+<div class="wrapper"id="pageTop"> 
+    
+        <header class="container">
+            <a href="index.html">
+            <span class="logo">KINDland</span>
+            </a>
+            <nav>
+                <ul>
+                    <!--класс актив добавляет полосочку-->
+                    <li class="active"><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О сайте</a></li>
+                    <li><a href="страны.html">Страны</a></li>
+                    <li><a href="новости.html">Новости</a></li>
+                    <!--класс бтн сделает кнопку-->
+                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--класс контейнер-->
+        <div class="hero container">
+            <div class="hero--info">
+                <h2>Designed & Developed by Kind</h2>
+                <h1>Добро пожаловать на KINDLAND</h1>
+                <p>Открой для себя самые красивые страны мира. Погрузись в их историю, культуру, кухню и знаменитые достопримечательности. Этот сайт поможет не только выбрать место для будущего путишествия, но и узнать больше о странах мира, их особенностях и интересных фактах.</p>
+                <!--класс бтн--> 
+                <a href="/страны.html">
+                <button class="btn">Все страны</button>
+                </a>
+            </div>
+
+
+<section class="glb-section">
+
+
+<div class="glb-stage">
+    <div class="glb-stamp-ring"></div>
+
+    <svg class="glb-label-ring" viewBox="0 0 300 300">
+    <defs>
+        <path id="glb-ring-path" d="M 150,150 m -138,0 a 138,138 0 1,1 276,0 a 138,138 0 1,1 -276,0" />
+    </defs>
+    <text>
+        <textPath href="#glb-ring-path" startOffset="0%">
+        ИССЛЕДУЙТЕ МИР • ИССЛЕДУЙТЕ МИР • ИССЛЕДУЙТЕ МИР •
+        </textPath>
+    </text>
+    </svg>
+
+    <div class="glb-globe-mount" id="glb-globe-mount">
+    <div class="glb-loading" id="glb-loading">Загрузка глобуса…</div>
+    </div>
+</div>
+
+<div class="glb-instructions">
+    <span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/><path d="M3 12h18M12 3a14 14 0 010 18 14 14 0 010-18z"/></svg>
+    Вращение — зажмите и потяните
+    </span>
+    <span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    Наведите на страну — факт
+    </span>
+    <span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+    Нажмите — подробная страница
+    </span>
+</div>
+</section>
+
+<div class="glb-tooltip" id="glb-tooltip">
+<p class="glb-tooltip-name" id="glb-tooltip-name">—</p>
+<p class="glb-tooltip-fact" id="glb-tooltip-fact">—</p>
+<span class="glb-tooltip-cta">
+    Узнать больше
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+</span>
+</div>
+
+            <!--вставить изображения-->
+            
+        </div>
+        <div class="trendone">
+            <div class="container trending">
+                <a href="/страны.html" class="see-all">Показать все</a>
+                <h3>Популярные страны</h3>
+                
+                <div class="games">
+                    <div class="block">
+                        <div class="block2">
+                        <a href="Italy.html">
+                        <img src="/img/italy.jpg" alt="">
+                        </a>
+                        </div>
+                        <span><img src="/img/fire 1.svg" alt="">Italy</span>
+                    </div>
+                    
+                    <div class="block">
+                        <div class="block2">
+                        <a href="/france.html">
+                        <img src="/img/france.jpg" alt="">
+                        </a>
+                        </div>
+                        <span><img src="/img/fire 1.svg" alt="">France</span>
+                    </div>
+                    
+                    <div class="block">
+                        <div class="block2">
+                        <a href="/United States.html">
+                        <img src="/img/america.jpg" alt="">
+                        </a>
+                        </div>
+                        <span><img src="/img/fire 1.svg" alt="">United States</span>
+                    </div>
+                    
+                    <div class="block">
+                        <div class="block2">
+                        <a href="/russia.html">
+                        <img src="/img/russia.jpg" alt="">
+                        </a>
+                        </div>
+                        <span><img src="/img/fire 1.svg" alt="">Russia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            
+
+
+
+
+            <section class="atl-hero">
+        <div class="atl-container">
+<div class="atl-top">
+    <div>
+    <div class="atl-eyebrow">195 стран · один клик до открытия</div>
+    <div class="atl-actions">
+        <button class="atl-btn atl-primary" id="randomCountry">🎲 Случайная страна</button>
+        <script src="main.js"></script>
+        <a href="глобус.html">
+        <button class="atl-btn">Смотреть карту мира →</button>
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="atl-cards">
+    <div class="atl-card">
+    <img src="https://images.unsplash.com/photo-1522547902298-51566e4fb383?w=400&q=80" alt="Япония">
+    <div class="atl-cap">
+        <div class="atl-country">Япония</div>
+        <div class="atl-fact">В Токио больше звёзд Мишлен, чем в Париже и Нью-Йорке вместе взятых.</div>
+    </div>
+    </div>
+    <div class="atl-card">
+    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=400&q=80" alt="Исландия">
+    <div class="atl-cap">
+        <div class="atl-country">Исландия</div>
+        <div class="atl-fact">Здесь нет комаров — единственная страна в мире, где их не встретить.</div>
+    </div>
+    </div>
+    <div class="atl-card">
+    <img src="/img/перу.jpg" alt="Перу">
+    <div class="atl-cap">
+        <div class="atl-country">Перу</div>
+        <div class="atl-fact">В Перу выращивают более 3000 сортов картофеля.</div>
+    </div>
+    </div>
+    <div class="atl-card">
+    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=80" alt="Марокко">
+    <div class="atl-cap">
+        <div class="atl-country">Марокко</div>
+        <div class="atl-fact">Мятный чай здесь подают в три захода — каждый раз чуть слаще.</div>
+    </div>
+    </div>
+</div>
+
+<div class="atl-stats">
+    <div class="atl-stat"><b>195</b><span>стран в атласе</span></div>
+    <div class="atl-stat"><b>2 400+</b><span>фактов и историй</span></div>
+    <div class="atl-stat"><b>6</b><span>тематических маршрутов</span></div>
+</div>
+        </div>
+</section>
+
+
+
+
+
+
+            
+    </div>
+    <!--класс с изображением на котором текст-->
+    <div class="features">
+        <div class="container">
+            <h3>Что ждет вас впереди?</h3>
+            <p>Выберите любую страну и узнаете о ней все самое интересное.</p>
+            <!--маленькие икконки с текстом-->
+            <div class="info">
+                <div class="block">
+                    <div class="icon">
+                    <img src="/img/книга2.jpg" alt="">
+                    </div>
+                    <p>Подробное описание</p>
+                    <img src="/img/arrow.png" alt="">
+                </div>
+                <div class="block">
+                    <div class="icon">
+                    <img src="/img/фотоапорат3.jpg" alt="">
+                    </div>
+                    <p>Красивые фотографии</p>
+                    <img src="/img/arrow.png" alt="">
+                </div>
+                <div class="block">
+                    <div class="icon">
+                    <img src="/img/геолакация.jpg" alt="">
+                    </div>
+                    <p>География</p>
+                    <img src="/img/arrow.png" alt="">
+                </div>
+                <div class="block">
+                    <div class="icon">
+                    <img src="/img/культура.jpg" alt="">
+                    </div>
+                    <p>Традиции</p>
+                    <img src="/img/arrow.png" alt="">
+                </div>
+                <div class="block">
+                    <div class="icon">
+                    <img src="/img/достопремичательсноть.jpg" alt="">
+                    </div>
+                    <p>Достопримечательности</p>
+                    <img src="/img/arrow.png" alt="">
+                </div>
+                <div class="block">
+                    <div class="icon">
+                    <img src="/img/самолет3.jpg" alt="">
+                    </div>
+                    <p>Туризм</p>
+                    <img src="/img/arrow.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container projects">
+            <h3>Исследуй мир</h3>
+            <p>Открой карту мира и узнай, где находятся крупнейшие города, горы, пустыни, леса, реки и другие удивительные места нашей планеты.</p>
+            <div class="images">
+                <img src="/img/пляж.jpg" alt="">
+                <img src="/img/горы.jpg" alt="">
+                <img src="/img/город.jpg" alt="">
+            </div>
+            <div class="images">
+                <img src="/img/исторические места.jpg" alt="">
+                <img src="/img/природа.jpg" alt="">
+                <img src="/img/кухня.jpg" alt="">
+            </div>
+            <a href="глобус.html" class="see-all">Открыть карту</a>
+        </div>
+
+        <div class="container email">
+            <h3>Не пропустите новые страны и интересные открытия</h3>
+            <p>Подпишитесь на нашу рассылку, чтобы первым узнать о новых странах, красивых местах и интересных фактах.</p>
+            <div class="block">
+                <div>
+                    <h4>Оставайтесь на связи</h4>
+                    <p>Получайте новые статьи, подборки и рекомендации прямо на свою электронную почту.</p>
+                </div>
+                <div>
+                    <input type="email" id="emailField" placeholder="Введите адрес электронной почты">
+                    <!--onclick вызывает javascript -->
+                    <button onclick="checkEmail()">Продолжить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="blocks container">
+            <div>
+            <span class="logo">KINDland</span>
+            <p>Этот сайт, посвещенный странам мира.<br>Разработано Алексеем Добрым</p>
+            
+            <br>
+                kindland.com
+            
+            </div>
+        <div>
+            <h4>О нас</h4>
+            <ul>
+                <li><a href="about.html">Наша миссия</a></li>
+                <li><a href="Об авторе.html">Об авторе</a></li>
+                <li><a href="страны.html">Все страны</a></li>
+                <li><a href="новости.html">Новости</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Обратная связь</h4>
+            <p>Email:dobrodeevalekse2@gmail.com</p>
+            <p><a href="https://vk.ru/kiiiiind">VK</a></p>
+            <p><a href="https://web.telegram.org/k/#@kiiiiiiiiiind">Telegram</a></p>
+            <p><a href="https://www.instagram.com/kind_8083?igsh=MXV6c3pkeW9idGJlaA%3D%3D&utm_source=qr">Instagram</a></p>
+        </div>
+        </div>
+        <hr>
+        <p>® 2026 KINDLAND | Все права защищены</p>
+    </footer>
+
+    <!--получение значение-->
+    <!--получать только значение это .value-->
+        <!--будет показывать если нет какогто символа что нет его-->
+    <script>
+        function checkEmail() {
+            let email = document.querySelector('#emailField').value;
+            if(!email.includes('@')) alert('Нет символа @');
+            else if(!email.includes('.')) alert('Нет символа .');
+            else alert('Все отлично!');
+        }
+    </script>
+
+
+<script src="https://unpkg.com/globe.gl"></script>
+
+<script>
+(function () {
+
+  // ------------------------------------------------------------------
+  // 1. Country facts & pages.
+  //
+  //    GLB_COUNTRY_FACTS — curated overrides for countries with a full page.
+  //    Everyone else still gets an auto-built fact from REST Countries data
+  //    (step 4b below), so hover cards work world-wide.
+  //
+  //    GLB_COUNTRY_PAGES — every country pre-listed with a placeholder link.
+  //    Replace "#" with the real page URL as each country
+  //    page goes live. Names match the ADMIN field of the Natural Earth
+  //    geojson used below; a couple of edge-case territories may not match
+  //    exactly and will silently fall back to an auto-generated slug link.
+  // ------------------------------------------------------------------
+var GLB_COUNTRY_FACTS = {
+    "Italy": "От Альп до Сицилии — 20 регионов, каждый со своей кухней и диалектом.",
+    "France": "Самая посещаемая страна мира — более 89 миллионов туристов в год.",
+    "Afghanistan": "Горная страна на перекрёстке Великого шёлкового пути.",
+    "Albania": "Более 750 км побережья Адриатического и Ионического морей.",
+    "Algeria": "Самая большая по площади страна Африки — почти вся territory это Сахара.",
+    "Angola": "Один из крупнейших производителей нефти и алмазов в Африке.",
+    "Argentina": "Родина танго и одни из крупнейших ледников за пределами Антарктиды.",
+    "Armenia": "Первая страна, принявшая христианство государственной религией — в 301 году.",
+    "Australia": "Единственная страна, занимающая целый континент.",
+    "Austria": "Родина Моцарта и почти 500 замков по всей стране.",
+    "Azerbaijan": "«Страна огней» — с древности известна горящими выходами природного газа.",
+    "The Bahamas": "Более 700 островов и рифов в Карибском море.",
+    "Bangladesh": "Одна из самых густонаселённых стран мира в дельте трёх великих рек.",
+    "Belarus": "Почти 40% территории покрыто лесами и болотами.",
+    "Belgium": "Родина вафель, шоколада и более 1500 сортов пива.",
+    "Belize": "Второй по величине коралловый риф в мире у побережья.",
+    "Benin": "Родина культа вуду, зародившегося здесь несколько веков назад.",
+    "Bhutan": "Единственная страна, измеряющая успех индексом «валового национального счастья».",
+    "Bolivia": "Здесь находится самое большое соляное озеро в мире — Салар-де-Уюни.",
+    "Bosnia and Herzegovina": "Мост Мостара — символ страны, восстановленный после войны 1990-х.",
+    "Botswana": "Более трети территории отведено под заповедники и нацпарки.",
+    "Brazil": "Самая большая страна Южной Америки, дом для Амазонии.",
+    "Brunei": "Один из богатейших султанатов мира благодаря запасам нефти.",
+    "Bulgaria": "Родина йогурта — особая культура бактерий названа в честь страны.",
+    "Burkina Faso": "Название означает «страна честных людей».",
+    "Burundi": "Одна из немногих стран, где кофе выращивают на склонах вулканов.",
+    "Cambodia": "Дом крупнейшего в мире религиозного комплекса — Ангкор-Ват.",
+    "Cameroon": "Называют «Африкой в миниатюре» за разнообразие ландшафтов.",
+    "Canada": "Обладает самой длинной береговой линией в мире.",
+    "Central African Republic": "Богата алмазами и золотом, но остаётся одной из беднейших стран.",
+    "Chad": "Названа в честь озера Чад — некогда одного из крупнейших в Африке.",
+    "Chile": "Самая длинная и узкая страна мира — более 4300 км с севера на юг.",
+    "China": "Родина бумаги, компаса, пороха и печати.",
+    "Colombia": "Крупнейший в мире производитель изумрудов.",
+    "Republic of the Congo": "Большая часть территории покрыта тропическими лесами бассейна Конго.",
+    "Democratic Republic of the Congo": "Вторая по величине тропическая лесная зона планеты после Амазонии.",
+    "Costa Rica": "Не имеет постоянной армии с 1948 года.",
+    "Croatia": "Более тысячи островов вдоль побережья Адриатики.",
+    "Cuba": "Родина сальсы и старинных автомобилей, до сих пор на ходу.",
+    "Cyprus": "По легенде, здесь из морской пены родилась богиня Афродита.",
+    "Czech Republic": "Прага — один из немногих крупных европейских городов, не разрушенных войной.",
+    "Denmark": "Считается одной из самых счастливых стран мира по опросам ООН.",
+    "Djibouti": "Здесь находится одно из самых солёных и низких мест на Земле.",
+    "Dominican Republic": "На острове находится старейший европейский город Нового Света.",
+    "Ecuador": "Названа в честь экватора, который пересекает страну.",
+    "Egypt": "Дом единственного из семи чудес древнего мира, сохранившегося до наших дней.",
+    "El Salvador": "Самая маленькая и самая густонаселённая страна Центральной Америки.",
+    "Equatorial Guinea": "Единственная страна Африки, где испанский — официальный язык.",
+    "Eritrea": "Столица Асмэра — объект всемирного наследия ЮНЕСКО с модернистской архитектурой.",
+    "Estonia": "Пионер цифровых технологий — голосовать онлайн можно с 2005 года.",
+    "eSwatini": "Одна из последних абсолютных монархий в мире.",
+    "Ethiopia": "Единственная африканская страна, никогда не бывшая колонией.",
+    "Falkland Islands": "Овец здесь в разы больше, чем людей.",
+    "Fiji": "Более 330 островов в южной части Тихого океана.",
+    "Finland": "Страна тысячи озёр — их здесь около 188 000.",
+    "Gabon": "Более 80% территории покрыто тропическими лесами.",
+    "Gambia": "Самая маленькая страна на материковой части Африки.",
+    "Georgia": "Одна из колыбелей виноделия — традиции насчитывают около 8000 лет.",
+    "Germany": "Родина печатного станка и более 1500 сортов пива.",
+    "Ghana": "Первая страна Африки южнее Сахары, получившая независимость.",
+    "Greece": "Колыбель Олимпийских игр и западной философии.",
+    "Greenland": "Самый большой остров в мире, почти полностью покрытый льдом.",
+    "Guatemala": "Родина шоколада — майя первыми начали использовать какао.",
+    "Guinea": "Один из крупнейших в мире источников бокситов.",
+    "Guinea-Bissau": "Архипелаг Бижагош у побережья — биосферный заповедник ЮНЕСКО.",
+    "Guyana": "Большая часть территории покрыта нетронутыми тропическими лесами.",
+    "Haiti": "Первая независимая чернокожая республика в мире, с 1804 года.",
+    "Honduras": "Дом древнего города майя Копан с искусно вырезанными стелами.",
+    "Hungary": "Термальные источники и купальни — часть повседневной жизни в Будапеште.",
+    "Iceland": "Страна без комаров и с одним из самых низких уровней преступности.",
+    "India": "Родина шахмат, числа ноль и десятичной системы счисления.",
+    "Indonesia": "Крупнейший архипелаг в мире — более 17 000 островов.",
+    "Iran": "Родина одного из древнейших календарей и персидских садов.",
+    "Iraq": "Земля Месопотамии — колыбель одной из первых цивилизаций человечества.",
+    "Ireland": "Родина Хэллоуина, выросшего из древнего кельтского праздника Самайн.",
+    "Israel": "Мёртвое море здесь — самая низкая точка суши на Земле.",
+    "Ivory Coast": "Крупнейший в мире производитель какао-бобов.",
+    "Jamaica": "Родина регги и спринтеров, бьющих мировые рекорды.",
+    "Japan": "Более 6800 островов, из которых обитаемы лишь несколько сотен.",
+    "Jordan": "Древний город Петра высечен прямо в розовых скалах.",
+    "Kazakhstan": "Крупнейшая страна мира, не имеющая выхода к океану.",
+    "Kenya": "Родина сафари и ежегодной великой миграции миллионов копытных.",
+    "Kosovo": "Одна из самых молодых стран Европы — независимость с 2008 года.",
+    "Kuwait": "Один из крупнейших в мире запасов нефти на душу населения.",
+    "Kyrgyzstan": "Более 90% территории занимают горы Тянь-Шаня и Памира.",
+    "Laos": "Единственная страна Юго-Восточной Азии, не имеющая выхода к морю.",
+    "Latvia": "Более половины территории покрыто лесами.",
+    "Lebanon": "Кедр — символ страны, растёт здесь уже тысячи лет.",
+    "Lesotho": "Единственная страна мира, полностью лежащая выше 1000 метров над уровнем моря.",
+    "Liberia": "Основана в XIX веке освобождёнными рабами из США.",
+    "Libya": "Почти вся территория — пустыня Сахара с богатыми запасами нефти.",
+    "Lithuania": "Географический центр Европы находится недалеко от Вильнюса.",
+    "Luxembourg": "Одна из самых маленьких, но богатейших стран мира на душу населения.",
+    "Macedonia": "Охридское озеро — одно из старейших озёр Европы.",
+    "Madagascar": "Более 90% видов животных острова больше нигде не встречаются.",
+    "Malawi": "Озеро Малави — дом для сотен видов рыб, каких нет больше нигде.",
+    "Malaysia": "Дом одних из старейших тропических лесов планеты — старше Амазонии.",
+    "Mali": "Легендарный город Тимбукту веками был центром торговли и знаний.",
+    "Mauritania": "Почти вся территория — пустыня Сахара с редкими оазисами.",
+    "Mexico": "Родина шоколада, кукурузы и томатов, подаренных всему миру.",
+    "Moldova": "Дом крупнейших в мире винных погребов протяжённостью сотни километров.",
+    "Mongolia": "Самая малонаселённая независимая страна мира.",
+    "Montenegro": "Название означает «чёрная гора» — в честь тёмных горных лесов.",
+    "Morocco": "Медина Феса — один из крупнейших пешеходных городских районов мира.",
+    "Mozambique": "Более 2500 км побережья Индийского океана.",
+    "Myanmar": "Тысячи древних буддийских храмов и пагод в долине Багана.",
+    "Namibia": "Дом одной из старейших пустынь мира — Намиб.",
+    "Nepal": "Здесь находится восемь из десяти высочайших вершин планеты.",
+    "Netherlands": "Почти треть территории лежит ниже уровня моря.",
+    "New Caledonia": "Одна из крупнейших лагун мира, объект всемирного наследия ЮНЕСКО.",
+    "New Zealand": "Первая страна в мире, где женщины получили право голоса — в 1893 году.",
+    "Nicaragua": "Крупнейшее озеро Центральной Америки — дом для пресноводных акул.",
+    "Niger": "Большая часть территории — пустыня Сахара.",
+    "Nigeria": "Самая населённая страна Африки.",
+    "North Korea": "Одна из самых закрытых стран мира для иностранных туристов.",
+    "Northern Cyprus": "Северная часть острова Кипр со своей самобытной историей.",
+    "Norway": "Родина лыж — само слово происходит из древнескандинавского языка.",
+    "Oman": "Один из старейших независимых государств арабского мира.",
+    "Pakistan": "Дом одной из древнейших цивилизаций — Хараппской, возрастом более 4000 лет.",
+    "Panama": "Панамский канал соединяет Атлантический и Тихий океаны.",
+    "Papua New Guinea": "Более 800 языков — самое языковое разнообразие на планете.",
+    "Paraguay": "Одна из двух стран Южной Америки без выхода к морю.",
+    "Peru": "Дом древнего города инков Мачу-Пикчу в Андах.",
+    "Philippines": "Более 7600 островов в западной части Тихого океана.",
+    "Poland": "Родина Коперника и одной из старейших в Европе соляных шахт.",
+    "Portugal": "Старейшее государство-нация в Европе с неизменными границами с XIII века.",
+    "Puerto Rico": "Здесь находится один из крупнейших радиотелескопов, изучавших сигналы из космоса.",
+    "Qatar": "Один из богатейших регионов мира на душу населения благодаря газу.",
+    "Romania": "Родина легенды о Дракуле, вдохновлённой замком Бран в Трансильвании.",
+    "Russia": "Самая большая страна в мире, охватывающая 11 часовых поясов.",
+    "Rwanda": "Одна из немногих стран, где ещё живут горные гориллы.",
+    "Saudi Arabia": "Родина ислама и городов Мекка и Медина.",
+    "Senegal": "Розовое озеро Ретба меняет цвет из-за особых водорослей.",
+    "Serbia": "Родина изобретателя Николы Теслы.",
+    "Sierra Leone": "Название означает «львиные горы» на португальском.",
+    "Slovakia": "Более 6000 пещер — одна из самых пещеристых стран Европы.",
+    "Slovenia": "Более половины территории покрыто лесами.",
+    "Solomon Islands": "Почти тысяча островов в южной части Тихого океана.",
+    "Somalia": "Самая длинная береговая линия материковой Африки.",
+    "Somaliland": "Непризнанное государство на севере Сомалийского полуострова.",
+    "South Africa": "Единственная страна с тремя столицами — законодательной, исполнительной и судебной.",
+    "South Korea": "Одна из самых технологичных стран мира по скорости интернета.",
+    "South Sudan": "Самая молодая страна мира — независимость получена в 2011 году.",
+    "Spain": "Родина фламенко, одна из самых посещаемых стран мира.",
+    "Sri Lanka": "Один из старейших в мире регионов выращивания чая.",
+    "Sudan": "На территории страны больше пирамид, чем в Египте.",
+    "Suriname": "Более 90% территории покрыто нетронутыми тропическими лесами.",
+    "Sweden": "Родина застёжки-молнии и правила «свободного доступа» к природе.",
+    "Switzerland": "Родина Красного Креста и одна из старейших демократий мира.",
+    "Syria": "Дамаск считается одним из старейших непрерывно заселённых городов мира.",
+    "Taiwan": "Один из мировых лидеров в производстве полупроводников.",
+    "Tajikistan": "Более 90% территории занимают горы Памира и Тянь-Шаня.",
+    "Thailand": "Единственная страна Юго-Восточной Азии, никогда не бывшая колонией.",
+    "East Timor": "Одна из самых молодых стран мира — независимость с 2002 года.",
+    "Togo": "Узкая полоса земли между Ганой и Бенином с выходом к океану.",
+    "Trinidad and Tobago": "Родина стальных барабанов и карнавальной музыки калипсо.",
+    "Tunisia": "Здесь снимали сцены пустынной планеты Татуин из «Звёздных войн».",
+    "Turkey": "Единственная страна, расположенная сразу на двух континентах.",
+    "Turkmenistan": "Дом кратера «Врата ада» — горящей воронки посреди пустыни.",
+    "Uganda": "Исток одной из величайших рек мира — Нила.",
+    "Ukraine": "Крупнейшая по площади страна, полностью расположенная в Европе.",
+    "United Arab Emirates": "Дубай построил самое высокое здание в мире — Бурдж-Халифа.",
+    "United Kingdom": "Родина футбола, регби и современного парламентаризма.",
+    "United Republic of Tanzania": "Дом высочайшей горы Африки — Килиманджаро.",
+    "United States of America": "Четвёртая по площади страна мира, объединяющая 50 штатов.",
+    "Uruguay": "Одна из первых стран, легализовавших выращивание каннабиса на госуровне.",
+    "Uzbekistan": "Самарканд и Бухара веками были центрами Великого шёлкового пути.",
+    "Vanuatu": "Архипелаг из более 80 островов вулканического происхождения.",
+    "Venezuela": "Дом самого высокого водопада в мире — Анхель.",
+    "Vietnam": "Бухта Халонг с тысячами известняковых скал — объект всемирного наследия.",
+    "West Bank": "Территория с древними городами, включая один из старейших в мире — Иерихон.",
+    "Western Sahara": "Одна из наименее населённых территорий мира, почти полностью пустыня.",
+    "Yemen": "Остров Сокотра называют «инопланетным» из-за уникальных драконовых деревьев.",
+    "Zambia": "Водопад Виктория на границе с Зимбабве — один из крупнейших в мире.",
+    "Zimbabwe": "Название страны происходит от древних каменных руин Great Zimbabwe."
+    
+};
+
+var GLB_COUNTRY_PAGES = {
+    "Afghanistan": "#", 
+    "Albania": "#", 
+    "Algeria": "#",
+    "Angola": "#", 
+    "Argentina": "#", 
+    "Armenia": "#",
+    "Australia": "#", 
+    "Austria": "#", 
+    "Azerbaijan": "#",
+    "The Bahamas": "#", 
+    "Bangladesh": "#", 
+    "Belarus": "#",
+    "Belgium": "#", 
+    "Belize": "#", 
+    "Benin": "#",
+    "Bhutan": "#", 
+    "Bolivia": "#", 
+    "Bosnia and Herzegovina": "#",
+    "Botswana": "#", 
+    "Brazil": "brazil.html", 
+    "Brunei": "#",
+    "Bulgaria": "#", 
+    "Burkina Faso": "#", 
+    "Burundi": "#",
+    "Cambodia": "#", 
+    "Cameroon": "#", 
+    "Canada": "canada.html",
+    "Central African Republic": "#", 
+    "Chad": "#", 
+    "Chile": "#",
+    "China": "china.html", 
+    "Colombia": "#", 
+    "Republic of the Congo": "#",
+    "Democratic Republic of the Congo": "#", 
+    "Costa Rica": "#",
+    "Croatia": "#", 
+    "Cuba": "#", 
+    "Cyprus": "#",
+    "Czech Republic": "#", 
+    "Denmark": "#", 
+    "Djibouti": "#",
+    "Dominican Republic": "#", 
+    "Ecuador": "#", 
+    "Egypt": "#",
+    "El Salvador": "#", 
+    "Equatorial Guinea": "#", 
+    "Eritrea": "#",
+    "Estonia": "#", 
+    "eSwatini": "#", 
+    "Ethiopia": "#",
+    "Falkland Islands": "#", 
+    "Fiji": "#", 
+    "Finland": "#",
+    "France": "france.html", 
+    "Gabon": "#", 
+    "Gambia": "#",
+    "Georgia": "#", 
+    "Germany": "#", 
+    "Ghana": "#",
+    "Greece": "#", 
+    "Greenland": "#", 
+    "Guatemala": "#",
+    "Guinea": "#", 
+    "Guinea-Bissau": "#", 
+    "Guyana": "#",
+    "Haiti": "#", 
+    "Honduras": "#", 
+    "Hungary": "#",
+    "Iceland": "#", 
+    "India": "#", 
+    "Indonesia": "#",
+    "Iran": "#", 
+    "Iraq": "#", 
+    "Ireland": "#",
+    "Israel": "#", 
+    "Italy": "italy.html", 
+    "Ivory Coast": "#",
+    "Jamaica": "#", 
+    "Japan": "japan.html", 
+    "Jordan": "#",
+    "Kazakhstan": "#", 
+    "Kenya": "#", 
+    "Kosovo": "#",
+    "Kuwait": "#", 
+    "Kyrgyzstan": "#", 
+    "Laos": "#",
+    "Latvia": "#", 
+    "Lebanon": "#", 
+    "Lesotho": "#",
+    "Liberia": "#", 
+    "Libya": "#", 
+    "Lithuania": "#",
+    "Luxembourg": "#", 
+    "Macedonia": "#", 
+    "Madagascar": "#",
+    "Malawi": "#", 
+    "Malaysia": "#", 
+    "Mali": "#",
+    "Mauritania": "#", 
+    "Mexico": "Mexico.html", 
+    "Moldova": "#",
+    "Mongolia": "#", 
+    "Montenegro": "#", 
+    "Morocco": "#",
+    "Mozambique": "#", 
+    "Myanmar": "#", 
+    "Namibia": "#",
+    "Nepal": "#", 
+    "Netherlands": "#", 
+    "New Caledonia": "#",
+    "New Zealand": "#", 
+    "Nicaragua": "#", 
+    "Niger": "#",
+    "Nigeria": "#", 
+    "North Korea": "#", 
+    "Northern Cyprus": "#",
+    "Norway": "#", 
+    "Oman": "#", 
+    "Pakistan": "#",
+    "Panama": "#", 
+    "Papua New Guinea": "#", 
+    "Paraguay": "#",
+    "Peru": "#", 
+    "Philippines": "#", 
+    "Poland": "#",
+    "Portugal": "Portugal.html", 
+    "Puerto Rico": "#", 
+    "Qatar": "#",
+    "Romania": "#", 
+    "Russia": "/russia.html" , 
+    "Rwanda": "#",
+    "Saudi Arabia": "Saudi Arabia.html", 
+    "Senegal": "#", 
+    "Serbia": "#",
+    "Sierra Leone": "#", 
+    "Slovakia": "#", 
+    "Slovenia": "#",
+    "Solomon Islands": "#", 
+    "Somalia": "#", 
+    "Somaliland": "#",
+    "South Africa": "#", 
+    "South Korea": "#", 
+    "South Sudan": "#",
+    "Spain": "Spain.html", 
+    "Sri Lanka": "#", 
+    "Sudan": "#",
+    "Suriname": "#", 
+    "Sweden": "#", 
+    "Switzerland": "#",
+    "Syria": "#", 
+    "Taiwan": "#", 
+    "Tajikistan": "#",
+    "Thailand": "#", 
+    "East Timor": "#", 
+    "Togo": "#",
+    "Trinidad and Tobago": "#", 
+    "Tunisia": "#", 
+    "Turkey": "#",
+    "Turkmenistan": "#", 
+    "Uganda": "#", 
+    "Ukraine": "#",
+    "United Arab Emirates": "#", 
+    "United Kingdom": "#",
+    "United Republic of Tanzania": "#", 
+    "United States of America": "United States.html",
+    "Uruguay": "#", 
+    "Uzbekistan": "#", 
+    "Vanuatu": "#",
+    "Venezuela": "#", 
+    "Vietnam": "#", 
+    "West Bank": "#",
+    "Western Sahara": "#", 
+    "Yemen": "#", 
+    "Zambia": "#",
+    "Zimbabwe": "#"
+    // Список покрывает страны из датасета Natural Earth 110m. Если у какой-то
+    // страны на глобусе название чуть отличается — карточка не сломается,
+    // просто подставится авто-ссылка countries/{slug}.html вместо этой записи.
+};
+
+  // Filled in once REST Countries data has loaded — keyed by ISO 3166-1 alpha-3 code.
+var GLB_REST_BY_ISO3 = {};
+  // Fallback lookup by lower-cased name, for the handful of features whose
+  // Natural Earth ISO_A3 code is unreliable (e.g. France is "-99" upstream).
+var GLB_REST_BY_NAME = {};
+
+function glb_slugify(name) {
+    return name.toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+function glb_formatPopulation(n) {
+    if (!n) return null;
+    if (n >= 1000000) return (n / 1000000).toFixed(n >= 10000000 ? 0 : 1).replace(".0", "") + " млн";
+    if (n >= 1000) return Math.round(n / 1000) + " тыс.";
+    return String(n);
+}
+
+function glb_restEntryFor(feature) {
+    var props = feature.properties;
+    var iso3 = props.ISO_A3;
+    if (!iso3 || iso3 === "-99") iso3 = props.ADM0_A3 || props.ISO_A3_EH;
+    if (iso3 && GLB_REST_BY_ISO3[iso3]) return GLB_REST_BY_ISO3[iso3];
+    var name = (props.ADMIN || props.NAME || "").toLowerCase();
+    return GLB_REST_BY_NAME[name] || null;
+}
+
+function glb_autoFact(rest) {
+    if (!rest) return "";
+    var bits = [];
+    if (rest.capital) bits.push("Столица: " + rest.capital);
+    if (rest.region) bits.push(rest.region);
+    var pop = glb_formatPopulation(rest.population);
+    if (pop) bits.push("население ≈ " + pop);
+    return bits.length ? bits.join(" • ") : "";
+}
+
+function glb_countryInfo(feature) {
+    var name = feature.properties.ADMIN || feature.properties.NAME || "Неизвестная страна";
+    var rest = glb_restEntryFor(feature);
+    var flag = rest && rest.flag ? rest.flag + " " : "";
+    return {
+    name: flag + name,
+    fact: GLB_COUNTRY_FACTS[name] || glb_autoFact(rest),
+    page: GLB_COUNTRY_PAGES[name] || ("countries/" + glb_slugify(name) + ".html")
+    };
+}
+
+  // ------------------------------------------------------------------
+  // 2. Tooltip card — follows the cursor, filled on hover.
+  // ------------------------------------------------------------------
+var mount    = document.getElementById("glb-globe-mount");
+var loading  = document.getElementById("glb-loading");
+var tooltip  = document.getElementById("glb-tooltip");
+var ttName   = document.getElementById("glb-tooltip-name");
+var ttFact   = document.getElementById("glb-tooltip-fact");
+
+function glb_showTooltip(x, y, info) {
+    ttName.textContent = info.name;
+    ttFact.textContent = info.fact;
+    var offset = 18;
+    var w = 236, h = tooltip.offsetHeight || 110;
+    var left = x + offset;
+    var top  = y - h / 2;
+    if (left + w > window.innerWidth - 12)  left = x - offset - w;
+    if (top < 12) top = 12;
+    if (top + h > window.innerHeight - 12) top = window.innerHeight - h - 12;
+    tooltip.style.left = left + "px";
+    tooltip.style.top  = top + "px";
+    tooltip.classList.add("glb-visible");
+}
+
+function glb_hideTooltip() {
+    tooltip.classList.remove("glb-visible");
+}
+
+mount.addEventListener("mouseleave", glb_hideTooltip);
+
+  // ------------------------------------------------------------------
+  // 3. Globe setup
+  // ------------------------------------------------------------------
+if (typeof Globe !== "function") {
+    loading.textContent = "Не удалось загрузить библиотеку глобуса (проверьте интернет-соединение)";
+    return;
+}
+
+var hoveredFeature = null;
+var hoveredInfo = null;
+
+var world = Globe()(mount)
+    .backgroundColor("rgba(0,0,0,0)")
+    // ЗАМЕНИ_НА_СВОЮ_ТЕКСТУРУ_ЗЕМЛИ при желании — сейчас стоит тёмная демо-текстура three-globe
+    .globeImageUrl("//unpkg.com/three-globe/example/img/earth-dark.jpg")
+    .showAtmosphere(true)
+    .atmosphereColor("#7f9174")
+    .atmosphereAltitude(0.16)
+    .polygonAltitude(function (d) { return d === hoveredFeature ? 0.02 : 0.006; })
+    .polygonCapColor(function (d) {
+    return d === hoveredFeature ? "rgba(201,138,63,0.85)" : "rgba(127,145,116,0.28)";
+    })
+    .polygonSideColor(function () { return "rgba(11,14,19,0.55)"; })
+    .polygonStrokeColor(function () { return "rgba(243,237,225,0.35)"; })
+    .polygonsTransitionDuration(200)
+    .onPolygonHover(function (feature) {
+    hoveredFeature = feature || null;
+    hoveredInfo = feature ? glb_countryInfo(feature) : null;
+    mount.style.cursor = feature ? "pointer" : "grab";
+    if (!feature) glb_hideTooltip();
+    })
+    .onPolygonClick(function (feature) {
+    if (!feature) return;
+    window.location.href = glb_countryInfo(feature).page;
+    });
+
+  // Card follows the cursor while a country is hovered; repositions on move
+  // but reuses the already-computed info instead of recalculating it per pixel.
+mount.addEventListener("mousemove", function (e) {
+    if (hoveredInfo) glb_showTooltip(e.clientX, e.clientY, hoveredInfo);
+});
+
+  // gentle idle auto-rotation, pauses while the user is interacting
+var controls = world.controls();
+controls.autoRotate = true;
+controls.autoRotateSpeed = 0.35;
+controls.enableDamping = true;
+
+var idleTimer = null;
+function glb_pauseThenResume() {
+    controls.autoRotate = false;
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(function () { controls.autoRotate = true; }, 4000);
+}
+mount.addEventListener("pointerdown", glb_pauseThenResume);
+mount.addEventListener("wheel", glb_pauseThenResume);
+
+  // responsive sizing to the circular stage
+function glb_resize() {
+    var rect = mount.getBoundingClientRect();
+    world.width(rect.width).height(rect.height);
+}
+window.addEventListener("resize", glb_resize);
+glb_resize();
+
+  // ------------------------------------------------------------------
+  // 4a. Country border data (Natural Earth, via globe.gl's example dataset).
+  //     This geojson already contains every recognised country/territory
+  //     (~180+ polygons), so the globe shows the whole world out of the box.
+  // ------------------------------------------------------------------
+var glb_bordersLoaded = false;
+var glb_restLoaded = false;
+
+function glb_maybeReveal() {
+    if (glb_bordersLoaded) loading.classList.add("glb-hidden");
+}
+
+fetch("https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson")
+    .then(function (res) { return res.json(); })
+    .then(function (countries) {
+    world.polygonsData(countries.features);
+    glb_bordersLoaded = true;
+    glb_maybeReveal();
+    })
+    .catch(function () {
+    loading.textContent = "Не удалось загрузить контуры стран";
+    });
+
+  // ------------------------------------------------------------------
+  // 4b. REST Countries data — capital / region / population / flag emoji
+  //     for every country, so hover cards work world-wide, not just for
+  //     the countries with curated facts above.
+  // ------------------------------------------------------------------
+fetch("https://restcountries.com/v3.1/all?fields=name,capital,region,population,cca3,flag")
+    .then(function (res) { return res.json(); })
+    .then(function (list) {
+    list.forEach(function (c) {
+        var entry = {
+        capital: c.capital && c.capital[0],
+        region: c.region,
+        population: c.population,
+        flag: c.flag
+        };
+        if (c.cca3) GLB_REST_BY_ISO3[c.cca3] = entry;
+        if (c.name) {
+        if (c.name.common) GLB_REST_BY_NAME[c.name.common.toLowerCase()] = entry;
+        if (c.name.official) GLB_REST_BY_NAME[c.name.official.toLowerCase()] = entry;
+        }
+    });
+    glb_restLoaded = true;
+    })
+    .catch(function () {
+      // Non-fatal — hover cards fall back to the ЗАМЕНИ_НА_ФАКТ_О_СТРАНЕ placeholder.
+    });
+
+})();
+</script>
+
+ <a class="scroll-top-btn" id="scrollTopBtn" href="#pageTop" title="Наверх">↑</a>
+ 
+<script>
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add('nav-visible');
+    } else {
+        scrollBtn.classList.remove('nav-visible');
+    }
+    });
+ 
+    document.querySelectorAll('.nav-link, .scroll-top-btn').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+    });
+</script>
+
+</body>
+</html>

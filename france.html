@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINDLAND</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    
+    <!--класс врапер фон-->
+    <div class="fr-wrapper" id="pageTop">
+        
+        <!--класс контейнер делает отступ по крайям-->
+        <header class="container">
+            <a href="index.html">
+            <span class="logo">KINDland</span>
+            </a>
+            <nav>
+                <ul>
+                    <!--класс актив добавляет полосочку-->
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О сайте</a></li>
+                    <li><a href="страны.html">Страны</a></li>
+                    <li><a href="новости.html">Новости</a></li>
+                    <!--класс бтн сделает кнопку-->
+                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+    <div class="container">
+        <div class="bl">
+
+    <button class="nav-back-btn" onclick="navBackOrHome()">
+    <span class="nav-back-arrow">←</span>
+    <span>Назад</span>
+        </button>
+
+        </div>
+    <div class="italy2">
+        <div class="flag">
+        <img src="/img2/флаг франция.jpg" alt="">
+        </div>
+        <div class="resp">
+        <img src="/img2/герб франции.webp" alt="">
+        </div>
+        <div class="var">
+            <ul>
+                <li><a href="#about"> Франция на карте мира</a></li>
+                <li><a href="#places">Общие сведения</a></li>
+                <li><a href="#cart">Интерактивная карта штатов</a></li>
+                <li><a href="#food">Один день во Франции</a></li>
+                <li><a href="#culture">Самые красивые места</a></li>
+                <li><a href="#kitchen">Национальная кухня</a></li>
+                <li><a href="#nature">Флаг Франции</a></li>
+                <li><a href="#nature2">Герб Франции</a></li>
+                <li><a href="#day">Государственные праздники</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="italy1">
+
+
+    <div class="fr-wrap">
+<!-- HERO-ШАПКА -->
+<div class="fr-hero">
+    <img src="/img2/фон франция.jpg" alt="Франция">
+    <div class="fr-hero-content">
+    <div class="fr-kicker">Путешествие по стране</div>
+    <h1>Франция</h1>
+    <p class="fr-hero-sub">Страна круассанов, Эйфелевой башни и слова «amour» — там, где каждая деревня похожа на открытку.</p>
+    </div>
+</div>
+
+<!-- БЫСТРЫЕ ФАКТЫ -->
+<div class="fr-quick-facts">
+    <div class="fr-chip">🗼 <b>Париж</b> — столица</div>
+    <div class="fr-chip">🗺 <b>18</b> регионов</div>
+    <div class="fr-chip">🥐 родина <b>круассана</b></div>
+    <div class="fr-chip">🍷 <b>400+</b> сортов сыра</div>
+    <div class="fr-chip">🎨 <b>самая посещаемая</b> страна мира</div>
+</div>
+
+<!-- ВСТУПЛЕНИЕ -->
+<p class="fr-intro-text">
+    Франция — страна, которую придумали, кажется, специально для романтиков и гурманов. Здесь готические соборы соседствуют с модными бутиками, виноградники Бургундии — с лавандовыми полями Прованса, а любой разговор легко превращается в спор о том, где готовят лучший багет. Разберёмся, где находится эта страна на карте, что стоит увидеть за один день, какая у неё кухня, флаг, герб и главные праздники.
+</p>
+
+<!-- ===== ФРАНЦИЯ НА КАРТЕ МИРА ===== -->
+<div class="centr">
+<h1 id="about">Франция на карте мира</h1>
+</div>
+
+<img class="fr-map-img" src="/img2/расположения франции.png" alt="Карта расположения Франции в Европе">
+<p class="fr-caption">Франция — Западная Европа, самая большая страна региона</p>
+
+<div class="fr-hex-fact">
+    <div class="fr-hex-emoji">⬡</div>
+    <p><b>«Гексагон»:</b> сами французы называют свою страну L'Hexagone — «шестиугольник» — из-за характерной формы очертаний на карте.</p>
+</div>
+
+<div class="fr-geo-stats">
+    <div class="fr-geo-stat"><span class="fr-geo-value">47°N</span><span class="fr-geo-label">широта (центр)</span></div>
+    <div class="fr-geo-stat"><span class="fr-geo-value">2°E</span><span class="fr-geo-label">долгота (центр)</span></div>
+    <div class="fr-geo-stat"><span class="fr-geo-value">8</span><span class="fr-geo-label">стран-соседей</span></div>
+    <div class="fr-geo-stat"><span class="fr-geo-value">3</span><span class="fr-geo-label">моря и океан</span></div>
+</div>
+
+<h2>С кем граничит Франция</h2>
+<p>Материковая Франция соседствует сразу с восемью странами:</p>
+
+<div class="fr-neighbors">
+    <div class="fr-neighbor"><span class="fr-flag-emoji">🇧🇪</span> Бельгия</div>
+    <div class="fr-neighbor"><span class="fr-flag-emoji">🇱🇺</span> Люксембург</div>
+    <div class="fr-neighbor"><span class="fr-flag-emoji">🇩🇪</span> Германия</div>
+    <div class="fr-neighbor"><span class="fr-flag-emoji">🇨🇭</span> Швейцария</div>
+    <a href="/Italy.html">
+    <div class="fr-neighbor"><span class="fr-flag-emoji">🇮🇹</span> Италия</div>
+    </a>
+    <div class="fr-neighbor"><span class="fr-flag-emoji">🇲🇨</span> Монако</div>
+    <div class="fr-neighbor"><span class="fr-flag-emoji">🇪🇸</span> Испания</div>
+    <div class="fr-neighbor"><span class="fr-flag-emoji">🇦🇩</span> Андорра</div>
+</div>
+
+<h2>Вода со всех сторон</h2>
+<p>Наведи курсор на карточку, чтобы узнать больше:</p>
+
+<div class="fr-seas">
+    <div class="fr-sea-card">
+    <h3>Атлантический океан</h3>
+    <p>Омывает западное побережье — от Бретани до Бискайского залива</p>
+    </div>
+    <div class="fr-sea-card">
+    <h3>Ла-Манш</h3>
+    <p>Отделяет Францию от Великобритании на севере</p>
+    </div>
+    <div class="fr-sea-card">
+    <h3>Средиземное море</h3>
+    <p>Юг страны и знаменитый Лазурный берег</p>
+    </div>
+</div>
+
+<div class="fr-overseas-fact">
+    🌍 <b>Франция больше, чем кажется:</b> помимо метрополии, у страны есть заморские территории по всему миру — от Гваделупы в Карибском море до острова Реюньон в Индийском океане.
+</div>
+
+<div class="obsh">
+<div class="work">
+    <div class="centr">
+        <h1 id="places">Общие сведения</h1>
+    </div>
+            
+            <div class="blocks">
+                <div class="block">
+                    <span class="badge blue">Территория</span>
+                    <h3>Площадь</h3>
+                    <p>643 801 км² (<a href="таблица территорий.html">47-я в мире</a>)</p>
+                    <h3>% водной поверхности</h3>
+                    <p>0,26 %</p>
+                    <h3>Население</h3>
+                    <p>68 084 217 чел.  (<a href="таблица населения.html">22-е</a>)</p>
+                    <h3>Плотность</h3>
+                    <p>123 чел./км²</p>
+                </div>
+                <div class="block">
+                    <span class="badge white">Страна</span>
+                    <h3>Столица</h3>
+                    <p>Париж</p>
+                    <h3>Форма правления</h3>
+                    <p>Президентско-парламентская республика</p>
+                    <h3>Официальный язык</h3>
+                    <p>Французский</p>
+                    <h3>Президент</h3>
+                    <p>Избирается на 5 лет</p>
+                    <h3>Названия жителей</h3>
+                    <p>Французы</p>
+                </div>
+                <div class="block">
+                    <div class="count">
+                    <span class="badge red">ВВП</span>
+                    <p class="hidden-text">
+                        Валовой Внутренний Продукт
+                    </p>
+                    </div>
+                    <h3>На душу населения</h3>
+                    <p>45,454 долл.</p>
+                    <h3>Итого (2020)</h3>
+                    <p>2,551 трлн</p>
+                    <h3>Валюта</h3>
+                    <p>евро(EUR)</p>
+                    <h3>Телефонный код</h3>
+                    <p>+33</p>
+                    <h3>Часовой пояс</h3>
+                    <p>UTC+1, летом UTC+2</p>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+        <div class="frm-wrap" id="regionsmap">
+            <div class="centr">
+            <h1 id="cart">Интерактивная карта регионов</h1>
+            </div>
+            <p class="subtitle">Наведи курсор на плитку — появится административный центр региона и любопытный факт о нём. Кнопки ниже подсвечивают целую макрозону страны.</p>
+
+            <div class="frm-legend" id="frmLegend"></div>
+
+            <div class="frm-panel">
+                <div class="frm-grid" id="frmGrid"></div>
+                <div class="frm-readout" id="frmReadout">
+                    <span class="frm-eyebrow">Регион</span>
+                    <p class="frm-placeholder">Наведите курсор на любую плитку карты — здесь появится административный центр региона и интересный факт о нём.</p>
+                </div>
+            </div>
+        </div>
+
+
+<!-- ===== ОДИН ДЕНЬ ВО ФРАНЦИИ ===== -->
+<div class="oneday">
+    <div class="centr">
+            <h1 id="food">Один день во Франции</h1>
+    </div>
+            <p class="subtitle">
+                    Представьте, что сегодня вы проснулись во Франции. 
+                    Как может выглядеть ваш идеальный день?
+            </p>
+
+            <div class="day-block">
+                <div class="day-img">
+                    <img src="/img2/9.00.jpg" alt="кофе">
+                </div>
+
+                <div class="day-text">
+                    <span>🥐 09:00</span>
+                    <h3>Круассан и кофе в квартале Марэ</h3>
+                    <p>
+                        Начните утро как местный — с булочной на углу и эспрессо стоя у барной стойки.
+                    </p>
+                    <small>📍 Квартал Марэ, Париж</small>
+                </div>
+            </div>
+
+            <div class="day-block reverse">
+
+        <div class="day-img">
+            <img src="/img2/11.00.webp" alt="Нотр-Дам">
+        </div>
+
+        <div class="day-text">
+            <span>⛪ 11:00</span>
+            <h3>Собор Нотр-Дам и остров Сите</h3>
+            <p>
+                Прогулка по историческому сердцу Парижа, откуда начинался город.
+            </p>
+
+            <small>📍 Остров Сите, Париж</small>
+        </div>
+    </div>
+
+    <!-- 13:00 -->
+    <div class="day-block">
+        <div class="day-img">
+            <img src="/img2/13.00.webp" alt="обед">
+        </div>
+
+        <div class="day-text">
+            <span>🥖 13:00</span>
+            <h3>Обед в бистро у Сены</h3>
+            <p>
+                Классика: луковый суп или стейк-фри с видом на набережную.
+            </p>
+
+            <small>📍 Набережная Сены, Париж</small>
+        </div>
+    </div>
+
+    <!-- 15:00 -->
+    <div class="day-block reverse">
+
+        <div class="day-img">
+            <img src="/img2/15.00.jpg" alt="Лувр">
+        </div>
+
+        <div class="day-text">
+            <span>🖼️ 15:00</span>
+            <h3>Лувр или Музей Орсе</h3>
+            <p>
+                Выберите один музей и посвятите ему пару часов — охватить всё за раз невозможно, и не нужно.
+            </p>
+
+            <small>📍 Лувр, Париж</small>
+        </div>
+    </div>
+
+    <!-- 18:00 -->
+    <div class="day-block">
+
+        <div class="day-img">
+            <img src="/img2/18.00.jpg" alt="Эльфивая башня">
+        </div>
+
+        <div class="day-text">
+            <span> 🌅 18:00</span>
+            <h3>Закат на смотровой площадке Трокадеро</h3>
+            <p>
+                Лучший вид на Эйфелеву башню — и без толп у самой башни.
+            </p>
+
+            <small>📍 Площадь Трокадеро, Париж</small>
+        </div>
+
+    </div>
+
+    <!--21.00-->
+    <div class="day-block reverse">
+
+        <div class="day-img">
+            <img src="/img2/21.00.jpg" alt="Ужин">
+        </div>
+
+        <div class="day-text">
+            <span>🍷 21:00</span>
+            <h3>Ужин на Монмартре</h3>
+            <p>
+                Завершите день среди узких улочек художественного квартала — с бокалом вина и видом на ночной город.
+            </p>
+
+            <small>📍 Монмартр, Париж</small>
+        </div>
+
+    </div>
+        </div>
+
+
+
+<!-- ===== САМЫЕ КРАСИВЫЕ МЕСТА ===== -->
+<div class="fra">
+        <div class="work">
+            <div class="centr">
+            <h1 id="culture">Самые красивые места</h1>
+            </div>
+            <div class="blocks">
+                
+                <div class="block">
+                    <img src="/img2/Эйфивая башня.jpg" alt="">
+                    <span class="badge blue">Эйфелева башня</span>
+                    <p class="ots">Символ Парижа и одно из самых узнаваемых мест Франции.</p>
+                </div>
+                <div class="block">
+                    <img src="/img2/берге.jpg" alt="">
+                    <span class="badge white">Лазурный берег</span>
+                    <p class="ots">Солнечное побережье с бирюзовым морем и красивыми городами.</p>
+
+                </div>
+                <div class="block">
+                    <img src="/img2/мон сен ш.jpg" alt="">
+                    <span class="badge red">Мон-Сен-Мишель</span>
+                    <p class="ots">Средневековое аббатство на скалистом острове, окружённое приливами</p>
+                </div>
+            </div>
+        <div class="blo2">
+            <div class="blocks">
+                
+                <div class="block">
+                    <img src="/img2/Версальский дворец.jpg" alt="">
+                    <span class="badge blue">Версальский дворец</span>
+                    <p class="ots">Роскошный дворец с величественными залами и огромными садами.</p>
+                </div>
+                <div class="block">
+                    <img src="/img2/монблан2.jpg" alt="">
+                    <span class="badge white">Монблан</span>
+                    <p class="ots">Высокие Альпы, заснежанные вершины и невероятные горные пейзажи.</p>
+
+                </div>
+                <div class="block">
+                    <img src="/img2/долина.jpg" alt="">
+                    <span class="badge red">Долина Луары</span>
+                    <p class="ots">Живописный регион Франции, знаменитый замками и красивыми садами.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+
+
+
+
+
+<!-- ===== НАЦИОНАЛЬНАЯ КУХНЯ ===== -->
+<div class="centr">
+<h1 id="kitchen">Национальная кухня</h1>
+</div>
+
+<div class="fr-cuisine-block">
+    <img src="/img2/круассан.jpg" alt="Круассан">
+    <div class="fr-cuisine-text">
+    <h3>Круассан и выпечка</h3>
+    <p>Слоёное масляное тесто, придуманное для завтрака, стало визитной карточкой страны. Настоящий французский круассан хрустит снаружи и тает внутри — секрет в многократном складывании теста с маслом.</p>
+    </div>
+</div>
+
+<div class="fr-cuisine-block fr-reverse">
+    <img src="/img2/сыр.jpg" alt="Французские сыры">
+    <div class="fr-cuisine-text">
+    <h3>Сыр на любой вкус</h3>
+    <p>Во Франции производят более 400 видов сыра — от мягкого бри и камамбера до острого рокфора. Говорят, здесь есть свой сыр на каждый день года.</p>
+    </div>
+</div>
+
+<div class="fr-cuisine-block">
+    <img src="/img2/вино десерт.jpg" alt="Французские десерты">
+    <div class="fr-cuisine-text">
+    <h3>Вино и десерты</h3>
+    <p>Макарон, эклер и крем-брюле — французские десерты продуманы до мелочей. А бокал вина к ужину здесь не роскошь, а часть повседневной культуры.</p>
+    </div>
+</div>
+
+<!-- ===== ФЛАГ ===== -->
+<div class="centr">
+<h1 id="nature">🇫🇷 Флаг Франции</h1>
+</div>
+
+<div class="fran">
+<img class="fr-map-img" src="/img2/флаг.jpg" alt="Флаг Франции">
+</div>
+<p class="fr-caption">Le Drapeau tricolore — французский триколор</p>
+
+<p>Наведи курсор на каждую полосу, чтобы узнать её значение:</p>
+
+<div class="fr-colors">
+    <div class="fr-color-card fr-blue">
+    <h3>Синий</h3>
+    <p>Цвет Парижа и символ свободы — одного из девизов Республики</p>
+    </div>
+    <div class="fr-color-card fr-white">
+    <h3>Белый</h3>
+    <p>Древний королевский цвет, символизирует равенство</p>
+    </div>
+    <div class="fr-color-card fr-red">
+    <h3>Красный</h3>
+    <p>Тоже цвет Парижа, символизирует братство и цену свободы</p>
+    </div>
+</div>
+
+<!-- ===== ГЕРБ ===== -->
+<div class="centr">
+<h1 id="nature2">Герб Франции</h1>
+</div>
+<p>У Франции нет официального герба со времён революции, но есть узнаваемая неофициальная эмблема Пятой республики:</p>
+
+<div class="fr-coat-block">
+    <img src="/img2/герб франции.webp" alt="Эмблема Франции">
+    <div class="fr-symbols">
+    <div class="fr-symbol-item">
+        <div class="fr-symbol-num">1</div>
+        <div class="fr-symbol-text">
+        <b>Голова льва и орла</b>
+        <span>Расположены на щите вместе с монограммой «RF» — République Française.</span>
+        </div>
+    </div>
+    <div class="fr-symbol-item">
+        <div class="fr-symbol-num">2</div>
+        <div class="fr-symbol-text">
+        <b>Ликторские фасции</b>
+        <span>Пучок прутьев с топором — античный символ правосудия и государственной власти.</span>
+        </div>
+    </div>
+    <div class="fr-symbol-item">
+        <div class="fr-symbol-num">3</div>
+        <div class="fr-symbol-text">
+        <b>Оливковая ветвь</b>
+        <span>Символ мира, как и на многих других государственных эмблемах.</span>
+        </div>
+    </div>
+    <div class="fr-symbol-item">
+        <div class="fr-symbol-num">4</div>
+        <div class="fr-symbol-text">
+        <b>Дубовая ветвь</b>
+        <span>Символизирует мудрость и стойкость.</span>
+        </div>
+    </div>
+    <div class="fr-symbol-item">
+        <div class="fr-symbol-num">5</div>
+        <div class="fr-symbol-text">
+        <b>Лента с девизом</b>
+        <span>«Liberté, Égalité, Fraternité» — «Свобода, Равенство, Братство».</span>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- ===== ГОСУДАРСТВЕННЫЕ ПРАЗДНИКИ ===== -->
+<div class="centr">
+<h1 id="day">Государственные праздники</h1>
+</div>
+
+<div class="fr-holiday-hero">
+    <div class="fr-holiday-emoji">🎆</div>
+    <p><b>Главный праздник страны — 14 июля</b>, День взятия Бастилии. По всей Франции проходят военные парады, балы пожарных и фейерверки, а самый эффектный салют устраивают на фоне Эйфелевой башни.</p>
+</div>
+
+<div class="fr-holidays-grid">
+    <div class="fr-holiday-card">
+    <div class="fr-holiday-date">1 января</div>
+    <h4>Новый год</h4>
+    <p>Jour de l'An — семейный праздник и начало года</p>
+    </div>
+    <div class="fr-holiday-card">
+    <div class="fr-holiday-date">1 мая</div>
+    <h4>День труда</h4>
+    <p>Fête du Travail — с традиционным букетом ландышей</p>
+    </div>
+    <div class="fr-holiday-card">
+    <div class="fr-holiday-date">8 мая</div>
+    <h4>День Победы</h4>
+    <p>Капитуляция Германии во Второй мировой войне</p>
+    </div>
+    <div class="fr-holiday-card">
+    <div class="fr-holiday-date">14 июля</div>
+    <h4>День взятия Бастилии</h4>
+    <p>Главный национальный праздник страны</p>
+    </div>
+    <div class="fr-holiday-card">
+    <div class="fr-holiday-date">15 августа</div>
+    <h4>Успение Богородицы</h4>
+    <p>Assomption — католический праздник</p>
+    </div>
+    <div class="fr-holiday-card">
+    <div class="fr-holiday-date">1 ноября</div>
+    <h4>День всех святых</h4>
+    <p>Toussaint — день памяти усопших</p>
+    </div>
+    <div class="fr-holiday-card">
+    <div class="fr-holiday-date">11 ноября</div>
+    <h4>День перемирия</h4>
+    <p>Окончание Первой мировой войны в 1918 году</p>
+    </div>
+    <div class="fr-holiday-card">
+    <div class="fr-holiday-date">25 декабря</div>
+    <h4>Рождество</h4>
+    <p>Noël — главный семейный праздник зимы</p>
+    </div>
+</div>
+</div>
+    </div>
+    </div>
+     <a class="scroll-top-btn" id="scrollTopBtn" href="#pageTop" title="Наверх">↑</a>
+ 
+<script>
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add('nav-visible');
+    } else {
+        scrollBtn.classList.remove('nav-visible');
+    }
+    });
+ 
+    document.querySelectorAll('.nav-link, .scroll-top-btn').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+    });
+</script>
+
+<!--кнопка назад-->
+<script>
+function navBackOrHome() {
+    // если есть история переходов внутри сайта — идём назад
+    if (document.referrer && document.referrer.includes(window.location.hostname)) {
+    window.history.back();
+    } else {
+      // если открыли страницу напрямую (например, по прямой ссылке) — на главную
+    window.location.href = 'index.html';
+    }
+}
+</script>
+
+
+<!-- ===== СКРИПТ ИНТЕРАКТИВНОЙ КАРТЫ РЕГИОНОВ (frm-) ===== -->
+<script>
+(function(){
+  "use strict";
+  var REGIONS = {
+    nord:     { label: "Север",              color: "#1E2A44" },
+    centre:   { label: "Центр",              color: "#D9A441" },
+    ouest:    { label: "Запад",              color: "#7C8C6B" },
+    sudouest: { label: "Юго-Запад",          color: "#4A7A8C" },
+    sudest:   { label: "Юго-Восток",         color: "#B23A2E" }
+  };
+ 
+  var REGIONS_DATA = [
+    {code:"HDF",n:"О-де-Франс",cap:"Лилль",r:1,c:5,reg:"nord",fact:"Индустриальный север страны, родина «Тур де Франс» и полей сражений Первой мировой войны."},
+    {code:"NOR",n:"Нормандия",cap:"Руан",r:2,c:3,reg:"nord",fact:"Место высадки союзников в 1944 году и родина знаменитого сыра камамбер."},
+    {code:"GES",n:"Гранд-Эст",cap:"Страсбург",r:2,c:7,reg:"nord",fact:"Приграничный регион с Германией; в Страсбурге заседает Европейский парламент."},
+    {code:"BRE",n:"Бретань",cap:"Ренн",r:3,c:1,reg:"ouest",fact:"Кельтский регион с мегалитами Карнака, которые старше египетских пирамид."},
+    {code:"IDF",n:"Иль-де-Франс",cap:"Париж",r:3,c:5,reg:"centre",fact:"Самый маленький по площади, но самый населённый регион страны — здесь живёт каждый шестой француз."},
+    {code:"PDL",n:"Пеи-де-ла-Луар",cap:"Нант",r:4,c:2,reg:"ouest",fact:"Атлантическое побережье и город Нант — родина писателя Жюля Верна."},
+    {code:"CVL",n:"Центр — Долина Луары",cap:"Орлеан",r:4,c:4,reg:"centre",fact:"Долина Луары с десятками королевских замков эпохи Возрождения."},
+    {code:"BFC",n:"Бургундия — Франш-Конте",cap:"Дижон",r:4,c:7,reg:"centre",fact:"Родина бургундских вин и родного города Виктора Гюго — Безансона."},
+    {code:"NAQ",n:"Новая Аквитания",cap:"Бордо",r:6,c:2,reg:"sudouest",fact:"Крупнейший регион Франции по площади, славится винами Бордо и пляжами Атлантики."},
+    {code:"ARA",n:"Овернь — Рона — Альпы",cap:"Лион",r:6,c:6,reg:"sudest",fact:"Здесь находится Монблан — высочайшая вершина Западной Европы (4808 м)."},
+    {code:"OCC",n:"Окситания",cap:"Тулуза",r:7,c:4,reg:"sudouest",fact:"Родина окситанского языка и крепости Каркассон — крупнейшей средневековой цитадели Европы."},
+    {code:"PAC",n:"Прованс — Альпы — Лазурный берег",cap:"Марсель",r:7,c:7,reg:"sudest",fact:"Лазурный берег с Ниццей и Каннами — символ французской курортной роскоши."},
+    {code:"COR",n:"Корсика",cap:"Аяччо",r:8,c:9,reg:"sudest",fact:"Гористый остров в Средиземном море, родина Наполеона Бонапарта."}
+  ];
+ 
+  var grid = document.getElementById('frmGrid');
+  var readout = document.getElementById('frmReadout');
+  var legend = document.getElementById('frmLegend');
+  if (!grid || !readout || !legend) return;
+  var activeRegion = null;
+ 
+  REGIONS_DATA.forEach(function(s){
+    var tile = document.createElement('div');
+    tile.className = 'frm-tile frm-region-' + s.reg;
+    tile.style.gridColumn = s.c;
+    tile.style.gridRow = s.r;
+    tile.textContent = s.code;
+    tile.setAttribute('data-region', s.reg);
+    tile.setAttribute('tabindex', '0');
+    tile.setAttribute('aria-label', s.n);
+ 
+    function show(){
+      document.querySelectorAll('.frm-tile').forEach(function(t){ t.classList.remove('is-selected'); });
+      tile.classList.add('is-selected');
+      readout.innerHTML =
+        '<span class="frm-eyebrow">Регион</span>' +
+        '<h3>' + s.n + '</h3>' +
+        '<div class="frm-cap">Административный центр — ' + s.cap + '</div>' +
+        '<p>' + s.fact + '</p>' +
+        '<div class="frm-region-tag">' + REGIONS[s.reg].label + '</div>';
+    }
+ 
+    tile.addEventListener('mouseenter', show);
+    tile.addEventListener('focus', show);
+    tile.addEventListener('click', show);
+    grid.appendChild(tile);
+  });
+ 
+  Object.keys(REGIONS).forEach(function(key){
+    var btn = document.createElement('button');
+    btn.innerHTML = '<i style="background:' + REGIONS[key].color + '"></i>' + REGIONS[key].label;
+    btn.addEventListener('click', function(){
+      if (activeRegion === key) {
+        activeRegion = null;
+        document.querySelectorAll('.frm-legend button').forEach(function(b){ b.classList.remove('is-active'); });
+        document.querySelectorAll('.frm-tile').forEach(function(t){ t.classList.remove('is-dimmed'); });
+        return;
+      }
+      activeRegion = key;
+      document.querySelectorAll('.frm-legend button').forEach(function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      document.querySelectorAll('.frm-tile').forEach(function(t){
+        t.classList.toggle('is-dimmed', t.getAttribute('data-region') !== key);
+      });
+    });
+    legend.appendChild(btn);
+  });
+})();
+</script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+        <div class="blocks container">
+            <div>
+            <span class="logo">KINDland</span>
+            <p>Этот сайт, посвещенный странам мира.<br>Разработано Алексеем Добрым</p>
+            
+            <br>
+                kindland.com
+            
+            </div>
+        <div>
+            <h4>О нас</h4>
+            <ul>
+                <li><a href="about.html">Наша миссия</a></li>
+                <li><a href="Об авторе.html">Об авторе</a></li>
+                <li><a href="страны.html">Все страны</a></li>
+                <li><a href="новости.html">Новости</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Обратная связь</h4>
+            <p>Email:dobrodeevalekse2@gmail.com</p>
+            <p><a href="https://vk.ru/kiiiiind">VK</a></p>
+            <p><a href="https://web.telegram.org/k/#@kiiiiiiiiiind">Telegram</a></p>
+            <p><a href="https://www.instagram.com/kind_8083?igsh=MXV6c3pkeW9idGJlaA%3D%3D&utm_source=qr">Instagram</a></p>
+        </div>
+        </div>
+        <hr>
+        <p>® 2026 KINDLAND | Все права защищены</p>
+    </footer>
+</div>
+    
+</body>
+</html>
+

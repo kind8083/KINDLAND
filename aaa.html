@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINDLAND — Китай</title>
+<style>
+/* =========================================================================
+   KINDLAND — main.css (встроенная копия, идентична другим страницам страны)
+   Классы страницы Китая: cn- (шапка/интро), Cn- (праздники), cnm- (карта)
+   ========================================================================= */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+ 
+:root{
+  --paper:#F3ECD9;
+  --cream:#FAF6EA;
+  --ink:#211F1A;
+  --muted:#5c584c;
+  --line:#E7E0CB;
+  --navy:#1E2A44;
+  --navy-deep:#131B2E;
+ 
+  --c-green:#3E7A4C;
+  --c-red:#B23A2E;
+  --c-red-deep:#8E2C22;
+  --c-white:#B8B2A0;
+  --c-blue:#1E2A44;
+  --c-gold:#D9A441;
+ 
+  --radius:6px;
+  --shadow: 0 16px 34px -18px rgba(20,18,12,0.35);
+ 
+  --font-display:'Fraunces', serif;
+  --font-body:'Work Sans', sans-serif;
+  --font-mono:'IBM Plex Mono', monospace;
+}
+ 
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; margin:0; padding:0; }
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:600;
+  line-height:1.12;
+  margin:0 0 14px;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+}
+h1{ font-size:clamp(2.2rem, 4.2vw, 3.4rem); }
+h2{ font-size:clamp(1.5rem, 2.6vw, 2.1rem); margin-top:44px; }
+h3{ font-size:1.2rem; }
+p{ margin:0 0 12px; color:var(--ink); }
+ 
+.container{ max-width:1180px; margin:0 auto; padding:0 28px; }
+.wrapper{ overflow-x:hidden; }
+ 
+header.container{
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:26px; padding-bottom:26px;
+}
+.logo{
+  font-family:var(--font-display); font-weight:700; font-size:1.3rem;
+  color:var(--navy); letter-spacing:-0.01em;
+}
+header nav ul{ display:flex; align-items:center; gap:30px; }
+header nav ul li a{
+  font-size:0.92rem; font-weight:500; color:var(--ink);
+  padding:6px 0; border-bottom:2px solid transparent; transition:.2s;
+}
+header nav ul li a:hover{ color:var(--c-red); border-color:var(--c-red); }
+header nav ul li.btn a{
+  background:var(--navy); color:var(--cream); padding:10px 20px;
+  border-radius:30px; border-bottom:none; font-family:var(--font-mono); font-size:0.82rem;
+}
+header nav ul li.btn a:hover{ background:var(--navy-deep); color:var(--cream); }
+ 
+footer{ background:var(--navy-deep); color:rgba(250,246,234,0.7); margin-top:80px; padding:52px 0 26px; }
+footer .blocks.container{
+  display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:32px;
+}
+footer .logo{ color:var(--cream); }
+footer h4{ color:var(--cream); font-family:var(--font-display); font-size:1.02rem; margin-bottom:14px; }
+footer p{ color:rgba(250,246,234,0.65); font-size:0.9rem; }
+footer ul li{ margin-bottom:8px; }
+footer ul li a, footer p a{ color:rgba(250,246,234,0.75); font-size:0.9rem; }
+footer ul li a:hover, footer p a:hover{ color:var(--c-gold); }
+footer hr{ border:none; border-top:1px solid rgba(250,246,234,0.15); margin:0 28px 18px; }
+footer > p{ text-align:center; font-size:0.8rem; color:rgba(250,246,234,0.45); }
+ 
+.str{ padding:22px 0 0; }
+.str a{ display:inline-flex; }
+.str img{ width:30px; height:30px; opacity:0.55; transition:.2s; }
+.str a:hover img{ opacity:1; transform:translateX(-3px); }
+ 
+.america2, .italy2, .russia2, .espana2, .mexico2, .france2, .portugal2, .saudi2, .japan2, .brazil2, .canada2, .china2{
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:28px;
+  padding:26px 0 10px; border-bottom:1px solid var(--line);
+}
+.america2 .flag, .italy2 .flag, .russia2 .flag, .espana2 .flag, .mexico2 .flag, .france2 .flag, .portugal2 .flag, .saudi2 .flag, .japan2 .flag, .brazil2 .flag, .canada2 .flag, .china2 .flag{
+  width:64px; height:64px; border-radius:50%; overflow:hidden;
+  border:3px solid var(--cream); box-shadow:var(--shadow); flex-shrink:0;
+}
+.america2 .flag img, .italy2 .flag img, .russia2 .flag img, .espana2 .flag img, .mexico2 .flag img, .france2 .flag img, .portugal2 .flag img, .saudi2 .flag img, .japan2 .flag img, .brazil2 .flag img, .canada2 .flag img, .china2 .flag img{ width:100%; height:100%; object-fit:cover; }
+.america2 .resp img, .italy2 .resp img, .russia2 .resp img, .espana2 .resp img, .mexico2 .resp img, .france2 .resp img, .portugal2 .resp img, .saudi2 .resp img, .japan2 .resp img, .brazil2 .resp img, .canada2 .resp img, .china2 .resp img{ max-height:44px; width:auto; }
+.america2 .var ul, .italy2 .var ul, .russia2 .var ul, .espana2 .var ul, .mexico2 .var ul, .france2 .var ul, .portugal2 .var ul, .saudi2 .var ul, .japan2 .var ul, .brazil2 .var ul, .canada2 .var ul, .china2 .var ul{ display:flex; flex-wrap:wrap; gap:4px 22px; justify-content:flex-end; }
+.america2 .var a, .italy2 .var a, .russia2 .var a, .espana2 .var a, .mexico2 .var a, .france2 .var a, .portugal2 .var a, .saudi2 .var a, .japan2 .var a, .brazil2 .var a, .canada2 .var a, .china2 .var a{
+  font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.02em;
+  color:var(--muted); white-space:nowrap;
+}
+.america2 .var a:hover, .italy2 .var a:hover, .russia2 .var a:hover, .espana2 .var a:hover, .mexico2 .var a:hover, .france2 .var a:hover, .portugal2 .var a:hover, .saudi2 .var a:hover, .japan2 .var a:hover, .brazil2 .var a:hover, .canada2 .var a:hover, .china2 .var a:hover{ color:var(--c-red); }
+ 
+/* --- geo-wrap --- */
+.geo-wrap{ padding:56px 0 10px; }
+.geo-map-img{
+  max-width:420px; margin:22px auto 6px; border-radius:var(--radius);
+  border:1px solid var(--line); background:var(--cream); padding:14px;
+}
+.geo-caption, .caption{
+  text-align:center; font-family:var(--font-mono); font-size:0.76rem;
+  color:var(--muted); letter-spacing:0.02em; margin-bottom:30px;
+}
+.geo-boot-fact{
+  display:flex; align-items:flex-start; gap:16px;
+  background:var(--cream); border:1px solid var(--line); border-radius:var(--radius);
+  padding:20px 22px; margin-bottom:34px;
+}
+.geo-boot-emoji{ font-size:1.8rem; line-height:1; flex-shrink:0; }
+.geo-boot-fact p{ margin:0; color:var(--ink); font-size:0.95rem; }
+ 
+.geo-stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:38px; }
+.geo-stat{ background:var(--navy); color:var(--cream); border-radius:var(--radius); padding:20px 16px; text-align:center; }
+.geo-value{ display:block; font-family:var(--font-display); font-weight:600; font-size:1.6rem; }
+.geo-label{ display:block; font-family:var(--font-mono); font-size:0.66rem; letter-spacing:0.06em; text-transform:uppercase; color:rgba(250,246,234,0.7); margin-top:4px; }
+ 
+.geo-neighbors{ display:flex; gap:12px; flex-wrap:wrap; margin:16px 0 30px; }
+.geo-neighbor{ display:flex; align-items:center; gap:8px; background:var(--cream); border:1px solid var(--line); border-radius:30px; padding:9px 18px; font-size:0.9rem; }
+.geo-flag-emoji{ font-size:1.1rem; }
+ 
+.geo-seas{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:30px; }
+.geo-sea-card{ background:var(--cream); border:1px solid var(--line); border-radius:var(--radius); padding:18px; transition:.2s; }
+.geo-sea-card:hover{ border-color:var(--navy); transform:translateY(-3px); box-shadow:var(--shadow); }
+.geo-sea-card h3{ font-size:1rem; margin-bottom:6px; }
+.geo-sea-card p{ font-size:0.85rem; color:var(--muted); margin:0; }
+ 
+.geo-enclave-fact{ background:var(--navy); color:var(--cream); border-radius:var(--radius); padding:20px 22px; font-size:0.92rem; line-height:1.6; }
+.geo-enclave-fact b{ color:var(--c-gold); }
+ 
+/* --- work / blocks / block --- */
+.work{ padding:56px 0 10px; }
+.blocks{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.blo2{ margin-top:18px; }
+.block{ background:var(--cream); border:1px solid var(--line); border-radius:var(--radius); padding:24px; position:relative; overflow:hidden; }
+.block img{ border-radius:calc(var(--radius) - 2px); margin-bottom:14px; aspect-ratio:4/3; object-fit:cover; }
+.block h3{ font-size:0.98rem; margin:14px 0 2px; color:var(--muted); font-weight:600; }
+.block h3:first-of-type{ margin-top:0; }
+.block > p{ margin-bottom:0; font-size:1.02rem; }
+.block .ots{ font-size:0.92rem; color:var(--muted); margin-top:10px; }
+.block a{ color:var(--c-red); border-bottom:1px dotted var(--c-red); }
+ 
+.badge{ display:inline-block; font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.05em; text-transform:uppercase; padding:6px 12px; border-radius:20px; margin-bottom:14px; color:#fff; }
+.badge.green{ background:var(--c-green); }
+.badge.white{ background:#8f8b7a; }
+.badge.red{ background:var(--c-red); }
+.badge.blue{ background:var(--c-blue); }
+ 
+.count{ position:relative; }
+.hidden-text{ position:absolute; top:100%; left:0; margin-top:6px; font-size:0.76rem; color:var(--muted); opacity:0; transition:.2s; pointer-events:none; }
+.count:hover .hidden-text{ opacity:1; }
+ 
+/* --- oneday / day-block --- */
+.oneday{ padding:56px 0 10px; }
+.subtitle{ color:var(--muted); font-size:1rem; max-width:560px; margin-bottom:36px; }
+.day-block{ display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; padding:30px 0; border-bottom:1px solid var(--line); }
+.day-block:last-child{ border-bottom:none; }
+.day-block.reverse .day-img{ order:2; }
+.day-img{ border-radius:var(--radius); overflow:hidden; aspect-ratio:5/4; }
+.day-img img{ width:100%; height:100%; object-fit:cover; }
+.day-text span{ font-family:var(--font-mono); font-size:0.78rem; color:var(--c-red); letter-spacing:0.03em; }
+.day-text h3{ margin:8px 0 8px; }
+.day-text p{ color:var(--muted); font-size:0.95rem; }
+.day-text small{ display:inline-block; margin-top:8px; font-family:var(--font-mono); font-size:0.75rem; color:var(--muted); }
+ 
+/* --- kyh --- */
+.kyh{ padding:56px 0 6px; text-align:center; }
+.kyh h2{ margin-top:0; }
+ 
+/* --- block3 --- */
+.block3{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:center; padding:30px 0; border-bottom:1px solid var(--line); }
+.block3:last-of-type{ border-bottom:none; }
+.block3.reverse{ direction:rtl; }
+.block3.reverse > *{ direction:ltr; }
+.block3 img{ border-radius:var(--radius); aspect-ratio:5/4; object-fit:cover; box-shadow:var(--shadow); }
+.text2 h2{ margin-top:0; font-size:1.6rem; }
+.text2 p{ color:var(--muted); }
+ 
+/* --- wrap/cloude --- */
+.wrap{ padding:56px 0 10px; }
+.cloude{ max-width:820px; margin:0 auto; text-align:left; }
+.cloude h1{ text-align:center; }
+.cloude .subtitle{ text-align:center; margin:0 auto 30px; }
+.hero1-img{ border-radius:var(--radius); box-shadow:var(--shadow); margin:0 auto 8px; max-height:420px; width:100%; object-fit:cover; }
+ 
+.colors{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0 26px; }
+.color-card{ background:var(--cream); border:1px solid var(--line); border-radius:var(--radius); padding:20px; text-align:center; transition:.25s; cursor:default; }
+.color-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); }
+.color-card h3{ margin-bottom:8px; }
+.color-card p{ font-size:0.88rem; color:var(--muted); margin:0; }
+.color-card.green{ border-top:5px solid var(--c-green); }
+.color-card.white{ border-top:5px solid var(--c-white); }
+.color-card.red{ border-top:5px solid var(--c-red); }
+.color-card.blue{ border-top:5px solid var(--c-blue); }
+.color-card.yellow{ border-top:5px solid var(--c-gold); }
+ 
+.fun-fact{ background:var(--navy); color:var(--cream); border-radius:var(--radius); padding:18px 22px; font-size:0.92rem; margin-bottom:30px; }
+.fun-fact b{ color:var(--c-gold); }
+ 
+.timeline{ position:relative; padding-left:22px; margin-bottom:36px; }
+.timeline::before{ content:""; position:absolute; left:5px; top:4px; bottom:4px; width:2px; background:var(--line); }
+.timeline li{ position:relative; padding-bottom:22px; font-size:0.95rem; color:var(--muted); }
+.timeline li::before{ content:""; position:absolute; left:-22px; top:4px; width:11px; height:11px; border-radius:50%; background:var(--c-red); border:2px solid var(--paper); }
+.timeline .year{ display:inline-block; font-family:var(--font-mono); font-weight:600; color:var(--c-red); margin-right:10px; }
+ 
+.coat-block{ display:grid; grid-template-columns:0.8fr 1.2fr; gap:36px; align-items:center; margin:20px 0 34px; }
+.coat-block img{ border-radius:50%; aspect-ratio:1/1; object-fit:cover; border:4px solid var(--c-gold); }
+.symbols{ display:flex; flex-direction:column; gap:16px; }
+.symbol-item{ display:flex; gap:14px; align-items:flex-start; }
+.symbol-num{ font-family:var(--font-mono); font-size:0.75rem; color:var(--c-gold); border:1px solid var(--c-gold); border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.symbol-text b{ display:block; font-size:0.98rem; margin-bottom:2px; }
+.symbol-text span{ font-size:0.87rem; color:var(--muted); }
+ 
+/* --- cent --- */
+.cent{ padding:56px 0 6px; text-align:center; }
+.cent h2{ margin-top:0; }
+ 
+/* ---------- КЛАССЫ СТРАНИЦЫ КИТАЯ ---------- */
+.cn-wrap{ padding:34px 0 0; }
+ 
+.cn-hero{ position:relative; border-radius:10px; overflow:hidden; min-height:420px; display:flex; align-items:flex-end; box-shadow:var(--shadow); }
+.cn-hero img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; filter:brightness(0.62); }
+.cn-hero-content{ position:relative; z-index:1; padding:44px 40px; color:var(--cream); }
+.cn-kicker{ font-family:var(--font-mono); font-size:0.74rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--c-gold); margin-bottom:12px; }
+.cn-hero-content h1{ color:var(--cream); margin-bottom:14px; }
+.cn-hero-sub{ max-width:640px; color:rgba(250,246,234,0.9); font-size:1.02rem; margin:0; }
+ 
+.cn-quick-facts{ display:flex; flex-wrap:wrap; gap:12px; margin:28px 0; }
+.cn-chip{ display:flex; align-items:center; gap:8px; background:var(--cream); border:1px solid var(--line); border-radius:30px; padding:10px 18px; font-size:0.88rem; }
+.cn-chip b{ font-weight:600; }
+ 
+.cn-intro-text{ max-width:760px; font-size:1.08rem; color:#3a372e; margin-bottom:10px; }
+.cn-intro-text::first-letter{ font-family:var(--font-display); font-size:3.6rem; font-weight:600; float:left; line-height:0.8; padding:6px 10px 0 0; color:var(--c-red); }
+ 
+/* --- Cn-holiday --- */
+.Cn-holiday-hero{ display:flex; align-items:flex-start; gap:18px; background:var(--navy); color:var(--cream); border-radius:var(--radius); padding:26px 28px; margin-bottom:30px; }
+.Cn-holiday-emoji{ font-size:2rem; line-height:1; }
+.Cn-holiday-hero p{ margin:0; font-size:0.98rem; }
+.Cn-holiday-hero b{ color:var(--c-gold); }
+ 
+.Cn-holidays-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.Cn-holiday-card{ background:var(--cream); border:1px solid var(--line); border-radius:var(--radius); padding:18px; }
+.Cn-holiday-date{ font-family:var(--font-mono); font-size:0.72rem; color:var(--c-red); letter-spacing:0.03em; }
+.Cn-holiday-card h4{ font-size:1rem; margin:6px 0 4px; }
+.Cn-holiday-card p{ font-size:0.84rem; color:var(--muted); margin:0; }
+ 
+/* ---------- ИНТЕРАКТИВНАЯ КАРТА РЕГИОНОВ (cnm-) ---------- */
+.cnm-wrap{ padding:56px 0 10px; }
+.cnm-wrap .subtitle{ max-width:760px; }
+.cnm-legend{ display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 20px; }
+.cnm-legend button{
+  font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.02em;
+  border:1px solid var(--line); background:var(--cream); border-radius:20px;
+  padding:7px 13px; cursor:pointer; display:flex; align-items:center; gap:8px;
+  transition:.2s; color:var(--ink);
+}
+.cnm-legend button i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.cnm-legend button.is-active{ background:var(--navy); color:var(--cream); border-color:var(--navy); }
+.cnm-legend button:hover{ border-color:var(--navy); }
+ 
+.cnm-panel{ display:grid; grid-template-columns:0.6fr 0.4fr; gap:28px; align-items:start; }
+.cnm-grid{
+  display:grid; grid-template-columns:repeat(11, 1fr); grid-template-rows:repeat(9, 1fr);
+  gap:4px; aspect-ratio:11/9; max-width:440px; margin:0 auto;
+  background:var(--cream); border:1px solid var(--line); border-radius:8px; padding:16px;
+}
+.cnm-tile{
+  border-radius:4px; display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-mono); font-weight:600; font-size:0.5rem; color:#fff;
+  cursor:pointer; user-select:none; transition:transform .15s ease, filter .15s ease, opacity .2s ease;
+  opacity:0.92; text-align:center; padding:1px; line-height:1.05;
+}
+.cnm-tile:hover, .cnm-tile.is-selected{ transform:scale(1.22); opacity:1; filter:brightness(1.12); z-index:2; box-shadow:0 4px 10px rgba(0,0,0,0.25); }
+.cnm-tile.is-dimmed{ opacity:0.14; }
+.cnm-region-dongbei{ background:var(--navy); }
+.cnm-region-huabei{ background:var(--c-red); }
+.cnm-region-huadong{ background:var(--c-gold); color:var(--ink); }
+.cnm-region-zhongnan{ background:#7C8C6B; }
+.cnm-region-xinan{ background:#4A7A8C; }
+.cnm-region-xibei{ background:#6B4A3F; }
+ 
+.cnm-readout{
+  background:var(--navy); color:var(--cream); border-radius:8px; padding:24px;
+  min-height:300px; display:flex; flex-direction:column; position:sticky; top:16px;
+}
+.cnm-eyebrow{ font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--c-gold); font-weight:600; }
+.cnm-readout h3{ color:var(--cream); font-size:1.4rem; margin:6px 0 2px; }
+.cnm-cap{ font-family:var(--font-mono); font-size:0.76rem; color:rgba(250,246,234,0.6); margin-bottom:14px; }
+.cnm-readout p{ font-size:0.9rem; color:rgba(250,246,234,0.9); flex:1; margin:0; }
+.cnm-placeholder{ color:rgba(250,246,234,0.5); }
+.cnm-region-tag{ margin-top:auto; padding-top:14px; border-top:1px solid rgba(217,164,65,0.25); font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--c-gold); }
+ 
+@media (max-width: 980px){
+  .cnm-panel{ grid-template-columns:1fr; }
+  .cnm-readout{ position:static; }
+}
+ 
+/* ---------- КНОПКА "НАВЕРХ" ---------- */
+.scroll-top-btn{ position:fixed; right:26px; bottom:26px; z-index:60; width:50px; height:50px; border-radius:50%; background:var(--c-red); color:var(--cream); display:flex; align-items:center; justify-content:center; font-size:1.2rem; box-shadow:var(--shadow); opacity:0; pointer-events:none; transform:translateY(10px); transition:.25s ease; }
+.scroll-top-btn.nav-visible{ opacity:1; pointer-events:auto; transform:translateY(0); }
+.scroll-top-btn:hover{ background:var(--c-red-deep); }
+ 
+/* ---------- АДАПТИВ ---------- */
+@media (max-width: 980px){
+  .blocks{ grid-template-columns:repeat(2,1fr); }
+  .geo-stats, .geo-seas{ grid-template-columns:repeat(2,1fr); }
+  .Cn-holidays-grid{ grid-template-columns:repeat(2,1fr); }
+  .day-block, .block3, .coat-block{ grid-template-columns:1fr; }
+  .day-block.reverse .day-img{ order:0; }
+  .block3.reverse{ direction:ltr; }
+}
+@media (max-width: 680px){
+  header.container{ flex-wrap:wrap; gap:14px; }
+  header nav ul{ gap:16px; flex-wrap:wrap; }
+  .america2, .italy2, .russia2, .espana2, .mexico2, .france2, .portugal2, .saudi2, .japan2, .brazil2, .canada2, .china2{ grid-template-columns:1fr; text-align:center; gap:14px; }
+  .america2 .var ul, .italy2 .var ul, .russia2 .var ul, .espana2 .var ul, .mexico2 .var ul, .france2 .var ul, .portugal2 .var ul, .saudi2 .var ul, .japan2 .var ul, .brazil2 .var ul, .canada2 .var ul, .china2 .var ul{ justify-content:center; }
+  .blocks{ grid-template-columns:1fr; }
+  .geo-stats, .geo-seas, .Cn-holidays-grid{ grid-template-columns:1fr; }
+  footer .blocks.container{ grid-template-columns:1fr; text-align:center; }
+  .cn-hero-content{ padding:28px 22px; }
+  .colors{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+ 
+    <div class="wrapper" id="pageTop">
+        <header class="container">
+            <span class="logo">KINDland</span>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О сайте</a></li>
+                    <li><a href="страны.html">Страны</a></li>
+                    <li><a href="новости.html">Новости</a></li>
+                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+ 
+<div class="container">
+    <div class="str">
+        <a href="/страны.html">
+    <img src="/img/стрелка5.svg" alt="">
+        </a>
+    </div>
+    <div class="china2">
+        <div class="flag">
+        <img src="ЗАМЕНИ_НА_ФОТО_флаг_китая.jpg" alt="">
+        </div>
+        <div class="resp">
+        <img src="ЗАМЕНИ_НА_ИЗОБРАЖЕНИЕ_китайская_народная_республика_заголовок.png" alt="">
+        </div>
+        <div class="var">
+            <ul>
+                <li><a href="#about">Китай на карте мира</a></li>
+                <li><a href="#places">Общие сведения</a></li>
+                <li><a href="#food">Один день в Китае</a></li>
+                <li><a href="#culture">Самые красивые места</a></li>
+                <li><a href="#kitchen">Национальная кухня</a></li>
+                <li><a href="#nature">Флаг и герб Китая</a></li>
+                <li><a href="#regionsmap">Карта регионов</a></li>
+                <li><a href="#day">Государственные праздники</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="china1">
+ 
+        <div class="cn-wrap">
+ 
+    <div class="cn-hero">
+    <img src="ЗАМЕНИ_НА_ФОТО_шапка_панорама_великая_китайская_стена.jpg" alt="Китай">
+    <div class="cn-hero-content">
+        <div class="cn-kicker">Путешествие по стране</div>
+        <h1>Китай</h1>
+        <p class="cn-hero-sub">Одна из древнейших непрерывных цивилизаций планеты — от Великой стены и Запретного города до небоскрёбов Шанхая и рисовых террас юга.</p>
+    </div>
+    </div>
+ 
+ 
+<div class="cn-quick-facts">
+    <div class="cn-chip">🏮 <b>3000+ лет</b> письменной истории</div>
+    <div class="cn-chip">🗺 <b>33</b> региона под управлением КНР</div>
+    <div class="cn-chip">🐼 родина <b>больших панд</b></div>
+    <div class="cn-chip">🍜 родина <b>чая, бумаги и пороха</b></div>
+    <div class="cn-chip">🕰 <b>1</b> часовой пояс на всю страну</div>
+</div>
+ 
+ 
+<p class="cn-intro-text">
+    Китай — одна из немногих цивилизаций мира с непрерывной письменной историей длиной более трёх тысячелетий. Здесь древние императорские дворцы соседствуют с одними из самых высоких небоскрёбов планеты, а рисовые террасы юга — с пустынями и высокогорьями запада. Откройте Китай и узнайте, как страна, подарившая миру бумагу, порох, компас и книгопечатание, стала второй по величине экономикой мира.
+</p>
+        </div>
+ 
+ 
+        <div class="geo-wrap">
+ 
+<!-- ===== РАСПОЛОЖЕНИЕ КИТАЯ НА КАРТЕ ===== -->
+<h1 style="margin-top:0;" id="about">Китай на карте мира</h1>
+ 
+<img class="geo-map-img" src="ЗАМЕНИ_НА_ИЗОБРАЖЕНИЕ_карта_расположения_китая_в_восточной_азии.png" alt="Карта расположения Китая">
+<p class="geo-caption">Китай — Восточная Азия, третья или четвёртая по площади страна мира</p>
+ 
+<div class="geo-boot-fact">
+    <div class="geo-boot-emoji">🕰️</div>
+    <p><b>Один часовой пояс на всю страну:</b> хотя территория Китая по ширине сопоставима с США, вся страна официально живёт по единому пекинскому времени UTC+8 — из-за этого на западе страны солнце в разгар лета встаёт лишь около 10 утра.</p>
+</div>
+ 
+<div class="geo-stats">
+    <div class="geo-stat">
+    <span class="geo-value">35°N</span>
+    <span class="geo-label">широта (центр)</span>
+    </div>
+    <div class="geo-stat">
+    <span class="geo-value">103°E</span>
+    <span class="geo-label">долгота (центр)</span>
+    </div>
+    <div class="geo-stat">
+    <span class="geo-value">14</span>
+    <span class="geo-label">стран-соседей</span>
+    </div>
+    <div class="geo-stat">
+    <span class="geo-value">33</span>
+    <span class="geo-label">региона под управлением КНР</span>
+    </div>
+</div>
+ 
+<h2>С кем граничит Китай</h2>
+<p>У Китая больше сухопутных соседей, чем у любой другой страны мира, кроме России:</p>
+ 
+<div class="geo-neighbors">
+    <div class="geo-neighbor"><span class="geo-flag-emoji">🇷🇺</span> <a href="/russia.html">Россия</a></div>
+    <div class="geo-neighbor"><span class="geo-flag-emoji">🇲🇳</span> <a href="#">Монголия</a></div>
+    <div class="geo-neighbor"><span class="geo-flag-emoji">🇰🇿</span> <a href="#">Казахстан</a></div>
+    <div class="geo-neighbor"><span class="geo-flag-emoji">🇮🇳</span> <a href="#">Индия</a></div>
+    <div class="geo-neighbor"><span class="geo-flag-emoji">🇻🇳</span> <a href="#">Вьетнам</a></div>
+    <div class="geo-neighbor"><span class="geo-flag-emoji">🇰🇵</span> <a href="#">КНДР</a></div>
+</div>
+ 
+<h2>Моря вокруг страны</h2>
+<p>Наведи курсор на карточку, чтобы узнать больше о каждом побережье:</p>
+ 
+<div class="geo-seas">
+    <div class="geo-sea-card">
+    <h3>Жёлтое море</h3>
+    <p>Между северо-восточным Китаем и Корейским полуостровом</p>
+    </div>
+    <div class="geo-sea-card">
+    <h3>Восточно-Китайское море</h3>
+    <p>У побережья Шанхая и провинции Чжэцзян</p>
+    </div>
+    <div class="geo-sea-card">
+    <h3>Южно-Китайское море</h3>
+    <p>Тропическое побережье южного Китая, включая остров Хайнань</p>
+    </div>
+    <div class="geo-sea-card">
+    <h3>Бохайский залив</h3>
+    <p>Внутреннее море у берегов Пекина и Тяньцзиня</p>
+    </div>
+</div>
+ 
+<div class="geo-enclave-fact">
+    🏙️ <b>Два особых района:</b> Гонконг и Макао — бывшие британская и португальская колонии, вернувшиеся под управление Китая в 1997 и 1999 годах соответственно. По принципу «одна страна, две системы» они сохраняют собственную валюту, законы и границы.
+</div>
+ 
+</div>
+ 
+ 
+        <div class="work">
+            <h2 id="places">Общие сведения</h2>
+ 
+            <div class="blocks">
+                <div class="block">
+                    <span class="badge red">Территория</span>
+                    <h3>Площадь</h3>
+                    <p>9 596 960 км² (<a href="#">3–4-я в мире</a>)</p>
+                    <h3>% водной поверхности</h3>
+                    <p>~2,8 %</p>
+                    <h3>Население</h3>
+                    <p>~1,41 млрд чел. (<a href="#">1–2-е в мире</a>)</p>
+                    <h3>Плотность</h3>
+                    <p>~150 чел./км² (<a href="#">83-я</a>)</p>
+                </div>
+                <div class="block">
+                    <span class="badge red">Страна</span>
+                    <h3>Столица</h3>
+                    <p>Пекин</p>
+                    <h3>Форма правления</h3>
+                    <p>Однопартийная социалистическая республика во главе с КПК</p>
+                    <h3>Официальный язык</h3>
+                    <p>Путунхуа (стандартный китайский)</p>
+                    <h3>Председатель КНР</h3>
+                    <p>Си Цзиньпин</p>
+                    <h3>Названия жителей</h3>
+                    <p>Китайцы</p>
+                </div>
+                <div class="block">
+                    <div class="count">
+                    <span class="badge red">ВВП</span>
+                    <p class="hidden-text">
+                        Валовой Внутренний Продукт
+                    </p>
+                    </div>
+                    <h3>На душу населения</h3>
+                    <p>~13 000 долл.</p>
+                    <h3>Итого</h3>
+                    <p>~18 трлн (<a href="#">2-й</a>)</p>
+                    <h3>Валюта</h3>
+                    <p>юань, женьминьби (CNY)</p>
+                    <h3>Телефонный код</h3>
+                    <p>+86</p>
+                    <h3>Часовой пояс</h3>
+                    <p>UTC+8 (единый на всю страну)</p>
+                </div>
+            </div>
+        </div>
+ 
+ 
+        <div class="oneday">
+            <h2 id="food">Один день в Китае</h2>
+            <p class="subtitle">
+                    Представьте, что сегодня вы проснулись где-то в Китае.
+                    Как может выглядеть ваш идеальный день?
+            </p>
+ 
+            <div class="day-block">
+                <div class="day-img">
+                    <img src="ЗАМЕНИ_НА_ФОТО_07.00_завтрак_баоцзы_соевое_молоко_пекин.jpg" alt="Баоцзы и соевое молоко">
+                </div>
+ 
+                <div class="day-text">
+                    <span>🥟 07:00</span>
+                    <h3>Доброе утро, Пекин</h3>
+                    <p>
+                        Начните день, как местные — паровыми булочками баоцзы и тёплым соевым молоком у уличного лотка рядом с парком, где по утрам занимаются тайцзицюань.
+                    </p>
+                    <small>📍 Пекин</small>
+                </div>
+            </div>
+ 
+            <div class="day-block reverse">
+ 
+        <div class="day-img">
+            <img src="ЗАМЕНИ_НА_ФОТО_11.00_запретный_город_экскурсия.jpg" alt="Запретный город">
+        </div>
+ 
+        <div class="day-text">
+            <span>🏯 11:00</span>
+            <h3>Дворцы императоров</h3>
+            <p>
+                Прогуляйтесь по Запретному городу — крупнейшему дворцовому комплексу мира, который почти 500 лет был домом китайских императоров.
+            </p>
+ 
+            <small>📍 Запретный город, Пекин</small>
+        </div>
+    </div>
+ 
+    <!-- 15:00 -->
+    <div class="day-block">
+        <div class="day-img">
+            <img src="ЗАМЕНИ_НА_ФОТО_15.00_дим_сам_обед_гуанчжоу.jpg" alt="Дим-сам">
+        </div>
+ 
+        <div class="day-text">
+            <span>🥢 15:00</span>
+            <h3>Дневной чай и дим-сам</h3>
+            <p>
+                Отправляйтесь на традиционный обед ямча — чашка чая и десятки маленьких блюд дим-сам, которые заказывают вскладчину всей компанией.
+            </p>
+ 
+            <small>🍴 Чайный дом, Гуанчжоу</small>
+        </div>
+    </div>
+ 
+    <!-- 20:00 -->
+    <div class="day-block reverse">
+ 
+        <div class="day-img">
+            <img src="ЗАМЕНИ_НА_ФОТО_20.00_шанхай_небоскрёбы_огни.jpg" alt="Шанхай ночью">
+        </div>
+ 
+        <div class="day-text">
+            <span>🌆 20:00</span>
+            <h3>Огни Шанхая</h3>
+            <p>
+                Завершите день на набережной Вайтань, откуда открывается вид на футуристичный небоскрёбный район Пудун на другом берегу реки Хуанпу.
+            </p>
+            <small>📍 Вайтань, Шанхай</small>
+        </div>
+ 
+    </div>
+        </div>
+ 
+ 
+ 
+        <div class="work">
+            <h2 id="culture">Самые красивые места</h2>
+ 
+            <div class="blocks">
+ 
+                <div class="block">
+                    <img src="ЗАМЕНИ_НА_ФОТО_великая_китайская_стена.jpg" alt="">
+                    <span class="badge red">Великая Китайская стена</span>
+                    <p class="ots">Крупнейшее оборонительное сооружение в истории человечества протяжённостью более 21 000 км.</p>
+                </div>
+                <div class="block">
+                    <img src="ЗАМЕНИ_НА_ФОТО_запретный_город_пекин.jpg" alt="">
+                    <span class="badge yellow">Запретный город</span>
+                    <p class="ots">Дворцовый комплекс из 980 зданий в центре Пекина, крупнейший сохранившийся деревянный дворцовый ансамбль мира.</p>
+ 
+                </div>
+                <div class="block">
+                    <img src="ЗАМЕНИ_НА_ФОТО_террасы_гуйлинь_карст.jpg" alt="">
+                    <span class="badge red">Карстовые пейзажи Гуйлиня</span>
+                    <p class="ots">Причудливые известняковые холмы вдоль реки Ли, знакомые всему миру по изображению на банкноте.</p>
+                </div>
+            </div>
+        <div class="blo2">
+            <div class="blocks">
+ 
+                <div class="block">
+                    <img src="ЗАМЕНИ_НА_ФОТО_терракотовая_армия_сиань.jpg" alt="">
+                    <span class="badge red">Терракотовая армия</span>
+                    <p class="ots">Более 8000 глиняных воинов в натуральную величину, охраняющих гробницу первого императора Китая.</p>
+                </div>
+                <div class="block">
+                    <img src="ЗАМЕНИ_НА_ФОТО_чжанцзяцзе_горы_столбы.jpg" alt="">
+                    <span class="badge yellow">Чжанцзяцзе</span>
+ 
+                    <p class="ots">Причудливые каменные столбы, вдохновившие парящие горы в фильме «Аватар».</p>
+                </div>
+                <div class="block">
+                    <img src="ЗАМЕНИ_НА_ФОТО_шанхай_небоскрёбы_пудун.jpg" alt="">
+                    <span class="badge red">Шанхай</span>
+                    <p class="ots">Финансовая столица страны с одним из самых футуристичных силуэтов небоскрёбов в мире.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+ 
+ 
+        <div class="kyh">
+        <h2 id="kitchen">Национальная кухня</h2>
+        </div>
+        <div class="block3">
+    <img src="ЗАМЕНИ_НА_ФОТО_пекинская_утка.jpg" alt="Пекинская утка">
+    <div class="text2">
+    <h2>Пекинская утка</h2>
+    <p>Утка с хрустящей карамелизированной кожей, которую подают тонкими ломтиками с блинчиками, зелёным луком и соусом хойсин — одно из самых знаменитых блюд китайской кухни в мире.</p>
+    </div>
+    </div>
+ 
+<!-- Блок 2: текст слева, картинка справа -->
+<div class="block3 reverse">
+    <img src="ЗАМЕНИ_НА_ФОТО_дим_сам.jpg" alt="Изображение 2">
+    <div class="text2">
+    <h2>Дим-сам</h2>
+    <p>Десятки маленьких блюд на пару и на пару — от пельменей с креветками до булочек ча-сю-бао — южная кантонская традиция совместной трапезы за чаем.</p>
+    </div>
+</div>
+ 
+<!-- Блок 3: снова картинка слева, текст справа -->
+<div class="block3">
+    <img src="ЗАМЕНИ_НА_ФОТО_хого_острый_суп.jpg" alt="Изображение 3">
+    <div class="text2">
+    <h2>Хого (китайский самовар)</h2>
+    <p>Кипящий бульон в центре стола, куда компания опускает тонко нарезанное мясо и овощи — сычуаньская версия со жгучим маслом чили особенно популярна во всём Китае.</p>
+    </div>
+</div>
+ 
+ 
+    <div class="wrap">
+    <div class="cloude">
+ 
+<h1 id="nature">Флаг и герб Китая</h1>
+<p class="subtitle">Символы, за которыми стоит своя история</p>
+ 
+<!-- ФОТО 1: флаг -->
+<img class="hero1-img" src="ЗАМЕНИ_НА_ФОТО_флаг_китая_развевается.jpg" alt="Флаг Китая">
+<p class="caption">Красное полотнище с пятью звёздами — государственный флаг Китайской Народной Республики с 1949 года</p>
+ 
+<h2>Что означают элементы флага</h2>
+<p>Наведи курсор на каждую карточку, чтобы узнать её значение:</p>
+ 
+<div class="colors">
+    <div class="color-card red">
+    <h3>Красный фон</h3>
+    <p>Традиционный цвет удачи и революции в китайской культуре</p>
+    </div>
+    <div class="color-card yellow">
+    <h3>Большая звезда</h3>
+    <p>Символизирует руководящую роль Коммунистической партии Китая</p>
+    </div>
+    <div class="color-card yellow">
+    <h3>Четыре малые звезды</h3>
+    <p>Расположены полукругом вокруг большой звезды — по одной из трактовок символизируют единство народа под руководством партии</p>
+    </div>
+</div>
+ 
+<div class="fun-fact">
+    ⭐ <b>Забавный факт:</b> флаг был выбран по итогам всенародного конкурса 1949 года, в котором участвовало несколько тысяч эскизов — окончательный вариант, разработанный экономистом-любителем Цзэн Ляньсуном, утвердили лишь за несколько дней до провозглашения КНР.
+</div>
+ 
+<h2>Краткая история государства и флага</h2>
+<ul class="timeline">
+    <li><span class="year">221 г. до н.э.</span>Первое объединение Китая под властью императора Цинь Шихуанди.</li>
+    <li><span class="year">1912</span>Провозглашена Китайская Республика, конец эпохи императоров.</li>
+    <li><span class="year">1949</span>Провозглашена Китайская Народная Республика и утверждён современный флаг.</li>
+    <li><span class="year">1978</span>Начало политики реформ и открытости, заложившей основу современного экономического роста страны.</li>
+</ul>
+ 
+<h2>Государственная эмблема Китая — что зашифровано в символах</h2>
+ 
+<!-- ФОТО 2: эмблема -->
+<div class="coat-block">
+    <img src="ЗАМЕНИ_НА_ИЗОБРАЖЕНИЕ_государственная_эмблема_китая_тяньаньмэнь.jpg" alt="Государственная эмблема Китая">
+    <div class="symbols">
+    <div class="symbol-item">
+        <div class="symbol-num">1</div>
+        <div class="symbol-text">
+        <b>Ворота Тяньаньмэнь</b>
+        <span>Изображены в центре эмблемы — именно с этой трибуны в 1949 году было провозглашено образование КНР.</span>
+        </div>
+    </div>
+    <div class="symbol-item">
+        <div class="symbol-num">2</div>
+        <div class="symbol-text">
+        <b>Пять звёзд</b>
+        <span>Те же звёзды, что и на флаге — символ партии и единства народа.</span>
+        </div>
+    </div>
+    <div class="symbol-item">
+        <div class="symbol-num">3</div>
+        <div class="symbol-text">
+        <b>Колосья пшеницы и риса</b>
+        <span>Обрамляют эмблему по кругу, символизируя крестьянство и сельское хозяйство страны.</span>
+        </div>
+    </div>
+    <div class="symbol-item">
+        <div class="symbol-num">4</div>
+        <div class="symbol-text">
+        <b>Зубчатое колесо</b>
+        <span>В нижней части эмблемы символизирует рабочий класс и индустриальное развитие страны.</span>
+        </div>
+    </div>
+    </div>
+</div>
+ 
+<!-- ФОТО 3: доп. иллюстрация -->
+<img class="hero1-img" src="ЗАМЕНИ_НА_ФОТО_национальный_день_парад_пекин.jpg" alt="традиция">
+<p class="caption">Национальный день, 1 октября — торжества и праздничное освещение площади Тяньаньмэнь.</p>
+    </div>
+    </div>
+ 
+ 
+        <div class="cnm-wrap" id="regionsmap">
+            <h1 style="margin-top:0;">Интерактивная карта регионов</h1>
+            <p class="subtitle">Наведи курсор на плитку — появится административный центр региона и любопытный факт о нём. Кнопки ниже подсвечивают целую макрозону страны. Тайвань на карте не отмечен как регион КНР — фактический контроль над островом Пекин не осуществляет, а его статус остаётся предметом международного спора.</p>
+ 
+            <div class="cnm-legend" id="cnmLegend"></div>
+ 
+            <div class="cnm-panel">
+                <div class="cnm-grid" id="cnmGrid"></div>
+                <div class="cnm-readout" id="cnmReadout">
+                    <span class="cnm-eyebrow">Регион</span>
+                    <p class="cnm-placeholder">Наведите курсор на любую плитку карты — здесь появится административный центр региона и интересный факт о нём.</p>
+                </div>
+            </div>
+        </div>
+ 
+ 
+        <div class="cent">
+        <h2 id="day">Государственные праздники</h2>
+        </div>
+ 
+        <div class="Cn-holiday-hero">
+    <div class="Cn-holiday-emoji">🇨🇳</div>
+    <p><b>Главный праздник страны — 1 октября</b>, Национальный день. Отмечается в честь провозглашения Китайской Народной Республики в 1949 году — начинается неделя праздничных выходных, известная как «Золотая неделя».</p>
+</div>
+ 
+<div class="Cn-holidays-grid">
+    <div class="Cn-holiday-card">
+    <div class="Cn-holiday-date">1 января</div>
+    <h4>Новый год</h4>
+    <p>По григорианскому календарю — короткий официальный выходной</p>
+    </div>
+    <div class="Cn-holiday-card">
+    <div class="Cn-holiday-date">плавающая дата</div>
+    <h4>Китайский Новый год</h4>
+    <p>Праздник весны — главный праздник страны по лунному календарю, отмечается неделю</p>
+    </div>
+    <div class="Cn-holiday-card">
+    <div class="Cn-holiday-date">начало апреля</div>
+    <h4>Цинмин</h4>
+    <p>День поминовения усопших, семьи посещают могилы предков</p>
+    </div>
+    <div class="Cn-holiday-card">
+    <div class="Cn-holiday-date">1 мая</div>
+    <h4>День труда</h4>
+    <p>Государственный выходной по всей стране</p>
+    </div>
+    <div class="Cn-holiday-card">
+    <div class="Cn-holiday-date">плавающая дата</div>
+    <h4>Праздник драконьих лодок</h4>
+    <p>Дуаньу — гонки на драконьих лодках и рисовые клёцки цзунцзы</p>
+    </div>
+    <div class="Cn-holiday-card">
+    <div class="Cn-holiday-date">плавающая дата</div>
+    <h4>Праздник середины осени</h4>
+    <p>Чжунцю — любование полной луной и лунные пряники</p>
+    </div>
+    <div class="Cn-holiday-card">
+    <div class="Cn-holiday-date">1 октября</div>
+    <h4>Национальный день</h4>
+    <p>Главный государственный праздник — годовщина провозглашения КНР</p>
+    </div>
+</div>
+    </div>
+ 
+    <a class="scroll-top-btn" id="scrollTopBtn" href="#pageTop" title="Наверх">↑</a>
+ 
+<script>
+    // Кнопка "наверх" появляется только после прокрутки вниз (не мешает в самом начале страницы)
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add('nav-visible');
+    } else {
+        scrollBtn.classList.remove('nav-visible');
+    }
+    });
+ 
+    // Плавная прокрутка при клике по кнопкам навигации
+    document.querySelectorAll('.nav-link, .scroll-top-btn').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+    });
+</script>
+ 
+</div>
+    </div>
+ 
+ 
+ 
+    <footer>
+        <div class="blocks container">
+            <div>
+            <span class="logo">KINDland</span>
+            <p>Этот сайт, посвещенный странам мира.<br>Разработано Алексеем Добрым</p>
+ 
+            <br>
+                kindland.com
+ 
+            </div>
+        <div>
+            <h4>О нас</h4>
+            <ul>
+                <li><a href="">Наша миссия</a></li>
+                <li><a href="">История проекта</a></li>
+                <li><a href="">Все страны</a></li>
+                <li><a href="">Часто задаваемые вопросы</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Обратная связь</h4>
+            <p>Email:dobrodeevalekse2@gmail.com</p>
+            <p><a href="https://vk.ru/kiiiiind">VK</a></p>
+            <p><a href="https://web.telegram.org/k/#@kiiiiiiiiiind">Telegram</a></p>
+            <p><a href="https://www.instagram.com/kind_8083?igsh=MXV6c3pkeW9idGJlaA%3D%3D&utm_source=qr">Instagram</a></p>
+        </div>
+        </div>
+        <hr>
+        <p>® 2026 KINDLAND | Все права защищены</p>
+    </footer>
+</body>
+ 
+<!-- ===== СКРИПТ ИНТЕРАКТИВНОЙ КАРТЫ РЕГИОНОВ (cnm-) ===== -->
+<script>
+(function(){
+  "use strict";
+  var REGIONS = {
+    dongbei:  { label: "Северо-Восток",     color: "#1E2A44" },
+    huabei:   { label: "Север",             color: "#B23A2E" },
+    huadong:  { label: "Восток",            color: "#D9A441" },
+    zhongnan: { label: "Центральный Юг",    color: "#7C8C6B" },
+    xinan:    { label: "Юго-Запад",         color: "#4A7A8C" },
+    xibei:    { label: "Северо-Запад",      color: "#6B4A3F" }
+  };
+ 
+  var REGIONS_DATA = [
+    {n:"Синьцзян",cap:"Урумчи",r:2,c:2,reg:"xibei",fact:"Крупнейший по площади регион страны на границе с Центральной Азией, родина музыки и кухни уйгурской культуры."},
+    {n:"Тибет",cap:"Лхаса",r:5,c:2,reg:"xinan",fact:"Автономный регион на Тибетском плато со средней высотой более 4000 метров — «крыша мира»."},
+    {n:"Цинхай",cap:"Синин",r:4,c:4,reg:"xibei",fact:"Исток трёх крупнейших рек Азии — Янцзы, Хуанхэ и Меконга — расположен на местном плато."},
+    {n:"Ганьсу",cap:"Ланьчжоу",r:3,c:5,reg:"xibei",fact:"Через регион проходил Великий шёлковый путь, соединявший Китай с Центральной Азией и Европой."},
+    {n:"Нинся",cap:"Иньчуань",r:3,c:6,reg:"xibei",fact:"Небольшой автономный район на границе пустыни Гоби, известен винодельнями у подножия гор Хэланьшань."},
+    {n:"Внутренняя Монголия",cap:"Хух-Хото",r:1,c:7,reg:"huabei",fact:"Автономный район со степями и традициями монгольских кочевников, крупный производитель угля."},
+    {n:"Шэньси",cap:"Сиань",r:4,c:6,reg:"xibei",fact:"Здесь находится терракотовая армия императора Цинь Шихуанди возрастом более 2200 лет."},
+    {n:"Сычуань",cap:"Чэнду",r:5,c:4,reg:"xinan",fact:"Родина острой сычуаньской кухни и главный питомник больших панд в дикой природе."},
+    {n:"Юньнань",cap:"Куньмин",r:7,c:3,reg:"xinan",fact:"Самый этнически разнообразный регион страны с 25 официально признанными народностями."},
+    {n:"Гуйчжоу",cap:"Гуйян",r:6,c:4,reg:"xinan",fact:"Гористый регион с одними из красивейших водопадов Азии — Хуангошу."},
+    {n:"Чунцин",cap:"—",r:5,c:5,reg:"xinan",fact:"Крупнейший по площади муниципалитет страны, город построен на холмах над слиянием рек Янцзы и Цзялин."},
+    {n:"Гуанси",cap:"Наньнин",r:7,c:5,reg:"zhongnan",fact:"Автономный район с карстовыми пейзажами Гуйлиня, украшающими китайские купюры."},
+    {n:"Хайнань",cap:"Хайкоу",r:9,c:5,reg:"zhongnan",fact:"Тропический остров-курорт, который называют «китайскими Гавайями»."},
+    {n:"Гуандун",cap:"Гуанчжоу",r:7,c:6,reg:"zhongnan",fact:"Самая населённая провинция страны, промышленное сердце южного Китая рядом с Гонконгом."},
+    {n:"Хунань",cap:"Чанша",r:6,c:6,reg:"zhongnan",fact:"Родина Мао Цзэдуна и одной из самых острых кухонь Китая."},
+    {n:"Хубэй",cap:"Ухань",r:5,c:6,reg:"zhongnan",fact:"На реке Янцзы, недалеко отсюда расположена крупнейшая в мире ГЭС «Три ущелья»."},
+    {n:"Хэнань",cap:"Чжэнчжоу",r:4,c:7,reg:"zhongnan",fact:"Колыбель китайской цивилизации, где найдены древнейшие следы письменности эпохи Шан."},
+    {n:"Шаньси",cap:"Тайюань",r:3,c:7,reg:"huabei",fact:"Родина пещерных буддийских храмов Юньган и одного из древнейших деревянных зданий мира."},
+    {n:"Хэбэй",cap:"Шицзячжуан",r:2,c:7,reg:"huabei",fact:"Окружает Пекин и Тяньцзинь, здесь проходит значительная часть Великой Китайской стены."},
+    {n:"Пекин",cap:"—",r:2,c:8,reg:"huabei",fact:"Столица страны почти тысячу лет, дом Запретного города и Великой Китайской стены неподалёку."},
+    {n:"Тяньцзинь",cap:"—",r:3,c:8,reg:"huabei",fact:"Портовый город рядом со столицей, известен колониальной европейской архитектурой начала XX века."},
+    {n:"Шаньдун",cap:"Цзинань",r:4,c:8,reg:"huadong",fact:"Родина Конфуция, здесь находится священная гора Тайшань — одна из пяти священных гор даосизма."},
+    {n:"Цзянсу",cap:"Нанкин",r:5,c:8,reg:"huadong",fact:"Один из богатейших регионов страны с историческим городом садов Сучжоу."},
+    {n:"Аньхой",cap:"Хэфэй",r:5,c:7,reg:"huadong",fact:"Знаменит живописными горами Хуаншань, вдохновившими бесчисленные традиционные китайские пейзажи."},
+    {n:"Шанхай",cap:"—",r:5,c:9,reg:"huadong",fact:"Крупнейший город Китая по населению и финансовая столица страны с футуристичным районом Пудун."},
+    {n:"Чжэцзян",cap:"Ханчжоу",r:6,c:8,reg:"huadong",fact:"Родина Alibaba и живописного Западного озера в Ханчжоу, воспетого поэтами на протяжении веков."},
+    {n:"Цзянси",cap:"Наньчан",r:6,c:7,reg:"huadong",fact:"Родина фарфора — город Цзиндэчжэнь веками производил императорский фарфор Китая."},
+    {n:"Фуцзянь",cap:"Фучжоу",r:7,c:8,reg:"huadong",fact:"Прибрежный регион напротив Тайваня с уникальными круглыми глинобитными домами тулоу."},
+    {n:"Гирин",cap:"Чанчунь",r:2,c:10,reg:"dongbei",fact:"Родина корейской диаспоры на северо-востоке Китая и горнолыжных курортов."},
+    {n:"Ляонин",cap:"Шэньян",r:3,c:9,reg:"dongbei",fact:"Промышленный северо-восток страны с портовым городом Далянь на берегу Жёлтого моря."},
+    {n:"Хэйлунцзян",cap:"Харбин",r:1,c:10,reg:"dongbei",fact:"Самый северный регион страны, зимой здесь проходит крупнейший в мире фестиваль ледяных скульптур в Харбине."},
+    {n:"Макао",cap:"—",r:8,c:5,reg:"zhongnan",fact:"Особый административный район, бывшая португальская колония, крупнейший в мире центр игорного бизнеса по доходам."},
+    {n:"Гонконг",cap:"—",r:8,c:6,reg:"zhongnan",fact:"Особый административный район, бывшая британская колония, вернувшаяся под управление Китая в 1997 году."}
+  ];
+ 
+  var grid = document.getElementById('cnmGrid');
+  var readout = document.getElementById('cnmReadout');
+  var legend = document.getElementById('cnmLegend');
+  if (!grid || !readout || !legend) return;
+  var activeRegion = null;
+ 
+  REGIONS_DATA.forEach(function(s){
+    var tile = document.createElement('div');
+    tile.className = 'cnm-tile cnm-region-' + s.reg;
+    tile.style.gridColumn = s.c;
+    tile.style.gridRow = s.r;
+    tile.textContent = s.n.slice(0,2);
+    tile.setAttribute('data-region', s.reg);
+    tile.setAttribute('tabindex', '0');
+    tile.setAttribute('aria-label', s.n);
+ 
+    function show(){
+      document.querySelectorAll('.cnm-tile').forEach(function(t){ t.classList.remove('is-selected'); });
+      tile.classList.add('is-selected');
+      readout.innerHTML =
+        '<span class="cnm-eyebrow">Регион</span>' +
+        '<h3>' + s.n + '</h3>' +
+        '<div class="cnm-cap">Административный центр — ' + s.cap + '</div>' +
+        '<p>' + s.fact + '</p>' +
+        '<div class="cnm-region-tag">' + REGIONS[s.reg].label + '</div>';
+    }
+ 
+    tile.addEventListener('mouseenter', show);
+    tile.addEventListener('focus', show);
+    tile.addEventListener('click', show);
+    grid.appendChild(tile);
+  });
+ 
+  Object.keys(REGIONS).forEach(function(key){
+    var btn = document.createElement('button');
+    btn.innerHTML = '<i style="background:' + REGIONS[key].color + '"></i>' + REGIONS[key].label;
+    btn.addEventListener('click', function(){
+      if (activeRegion === key) {
+        activeRegion = null;
+        document.querySelectorAll('.cnm-legend button').forEach(function(b){ b.classList.remove('is-active'); });
+        document.querySelectorAll('.cnm-tile').forEach(function(t){ t.classList.remove('is-dimmed'); });
+        return;
+      }
+      activeRegion = key;
+      document.querySelectorAll('.cnm-legend button').forEach(function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      document.querySelectorAll('.cnm-tile').forEach(function(t){
+        t.classList.toggle('is-dimmed', t.getAttribute('data-region') !== key);
+      });
+    });
+    legend.appendChild(btn);
+  });
+})();
+</script>
+</html>

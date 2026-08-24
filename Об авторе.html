@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINDLAND</title>
+    <link rel="stylesheet" href="/css/main2.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header class="container">
+        <a href="index.html">
+            <span class="logo">KINDland</span>
+        </a>
+            <nav>
+                <ul>
+                    <!--класс актив добавляет полосочку-->
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О сайте</a></li>
+                    <li><a href="страны.html">Страны</a></li>
+                    <li><a href="новости.html">Новости</a></li>
+                    <!--класс бтн сделает кнопку-->
+                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+    <div class="container">
+
+        <button class="nav-back-btn" onclick="navBackOrHome()">
+    <span class="nav-back-arrow">←</span>
+    <span>Назад</span>
+        </button>
+        
+<div class="fd-grid"></div>
+
+<main class="fd-hero">
+
+<div class="fd-hero-left">
+
+    <div class="fd-eyebrow">
+    <span class="fd-dot"></span>
+    Frontend Developer
+    </div>
+
+    <h1 class="fd-title">
+    <span>Добродеев</span>
+    <span>Алексей</span>
+    </h1>
+
+    <p class="fd-desc">
+    Этот сайт — один из моих первых больших проектов. Я создал его, чтобы на практике изучать HTML, CSS и JavaScript, а также попробовать самостоятельно разработать полноценный сайт.
+    </p>
+
+    <div class="fd-stack">
+    <span class="fd-chip">HTML</span>
+    <span class="fd-chip">CSS</span>
+    <span class="fd-chip">JavaScript</span>
+    </div>
+
+    <div class="fd-hints">
+    <a class="fd-hint fd-hint-link" href="contacts.html">
+        <span>↗</span>
+        Контакты
+    </a>
+    <a class="fd-hint fd-hint-link">
+        <span class="fd-hint-arrow"></span>
+        Этот сайт — только начало. Дальше будет больше.
+    </a>
+    </div>
+
+</div>
+
+<div class="fd-stage" id="fdStage">
+    <svg class="fd-rope-svg" id="fdRopeSvg">
+    <line id="fdRopeLine" x1="0" y1="0" x2="0" y2="0" stroke="var(--fd-rope)" stroke-width="1.5" />
+    </svg>
+    <div class="fd-anchor"></div>
+    <div class="fd-card" id="fdCard">
+    <div class="fd-ribbon">
+        <div class="fd-ribbon-text">
+        <span>3D CARD</span>
+        3D CARD
+        <span>3D CARD</span>
+        3D CARD
+        </div>
+    </div>
+    <div class="fd-card-inner">
+        <div class="fd-photo">
+        <img
+            src="/imags/об авторе6.jpg"
+            alt="Rifqi — Frontend Developer"
+            onerror="this.style.display='none'"
+        >
+        <div class="fd-photo-fallback"></div>
+        </div>
+        <div class="fd-card-label">
+        <span class="fd-name">Alex Kind</span>
+        <span class="fd-role">Frontend Developer</span>
+        </div>
+    </div>
+    </div>
+</div>
+
+</main>
+
+
+
+
+
+<script>
+(function(){
+"use strict";
+
+var stage   = document.getElementById('fdStage');
+var card    = document.getElementById('fdCard');
+var svg     = document.getElementById('fdRopeSvg');
+var rope    = document.getElementById('fdRopeLine');
+
+var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ----------------------------------------------------------
+    Pendulum state
+    theta  : angle from vertical (radians), positive = right
+    omega  : angular velocity
+    L      : current rope length (px)
+    L0     : resting rope length (px), recalculated on resize
+  ---------------------------------------------------------- */
+
+var theta = 0;
+  var omega = reduceMotion ? 0 : 0.22;   // gentle initial sway
+var L = 40;
+var L0 = 90;
+  var maxExtraStretch = 70;              // elastic stretch while dragging
+  var maxAngle = 62 * Math.PI / 180;     // clamp so card can't swing off-stage
+
+  var GRAVITY = 1400;   // px/s^2 equivalent, tuned for feel not realism
+  var DAMPING = 0.55;   // angular damping
+var LENGTH_EASE = 0.12;
+
+var anchorX = 0, anchorY = 12;
+var cardHalfW = 120, cardHalfH = 160;
+
+var isDragging = false;
+var pointerId = null;
+var lastTime = null;
+var lastTheta = 0;
+
+var isDropping = !reduceMotion;
+var dropStart = null;
+var dropDuration = 1300;
+
+function measure(){
+    var rect = stage.getBoundingClientRect();
+    anchorX = rect.width / 2;
+    anchorY = 12;
+
+    var cw = card.offsetWidth || 240;
+    var ch = card.offsetHeight || 320;
+    cardHalfW = cw / 2;
+    cardHalfH = ch / 2;
+
+    // resting rope length: short enough that the card's top sits
+    // just under the anchor, leaving the rest of the stage for swing.
+    L0 = Math.max(50, Math.min(110, rect.height * 0.16));
+
+    if (!isDragging && !isDropping){
+    L = L0;
+    }
+}
+
+function easeOutBack(t){
+    var c1 = 1.4, c3 = c1 + 1;
+    return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
+}
+
+function clampTheta(t){
+    if (t > maxAngle) return maxAngle;
+    if (t < -maxAngle) return -maxAngle;
+    return t;
+}
+
+function clampCardCenter(x, y){
+    var stageW = stage.clientWidth;
+    var stageH = stage.clientHeight;
+    var minX = cardHalfW + 4;
+    var maxX = stageW - cardHalfW - 4;
+    var minY = cardHalfH * 0.4;
+    var maxY = stageH - 4;
+    return {
+    x: Math.min(Math.max(x, minX), maxX),
+    y: Math.min(Math.max(y, minY), maxY)
+    };
+}
+
+function applyTransform(){
+    var x = anchorX + L * Math.sin(theta);
+    var y = anchorY + L * Math.cos(theta);
+
+    var clamped = clampCardCenter(x, y);
+    x = clamped.x;
+    y = clamped.y;
+
+    // position card so its top-center (attach point) sits at (x, y)
+    card.style.left = x + 'px';
+    card.style.top = y + 'px';
+    card.style.marginLeft = (-cardHalfW) + 'px';
+    card.style.marginTop = '0px';
+    card.style.transform = 'translateY(-8px) rotate(' + (theta * (180 / Math.PI) * 0.55) + 'deg)';
+
+    rope.setAttribute('x1', anchorX);
+    rope.setAttribute('y1', anchorY);
+    rope.setAttribute('x2', x);
+    rope.setAttribute('y2', y - 4);
+}
+
+function step(now){
+    if (lastTime === null) lastTime = now;
+    var dt = Math.min((now - lastTime) / 1000, 0.032);
+    lastTime = now;
+
+    if (isDropping){
+    if (dropStart === null) dropStart = now;
+    var t = Math.min((now - dropStart) / dropDuration, 1);
+    var eased = easeOutBack(t);
+      L = -60 + (L0 - -60) * eased;
+      theta = Math.sin(t * Math.PI * 1.6) * 0.18 * (1 - t);
+    if (t >= 1){
+        isDropping = false;
+        L = L0;
+        omega = 0.25;
+    }
+    } else if (isDragging){
+      // position already driven directly by pointer handler
+    } else {
+      var angularAccel = -(GRAVITY / Math.max(L, 30)) * Math.sin(theta) - DAMPING * omega;
+      omega += angularAccel * dt;
+      theta += omega * dt;
+    theta = clampTheta(theta);
+      omega *= 0.995;
+
+      L += (L0 - L) * LENGTH_EASE;
+    }
+
+    applyTransform();
+    requestAnimationFrame(step);
+}
+
+function getStagePoint(clientX, clientY){
+    var rect = stage.getBoundingClientRect();
+    return { x: clientX - rect.left, y: clientY - rect.top };
+}
+
+function onPointerDown(e){
+    if (isDropping) return;
+    isDragging = true;
+    pointerId = e.pointerId;
+    card.classList.add('fd-dragging');
+    card.setPointerCapture(pointerId);
+    lastTheta = theta;
+    e.preventDefault();
+}
+
+function onPointerMove(e){
+    if (!isDragging || e.pointerId !== pointerId) return;
+
+    var p = getStagePoint(e.clientX, e.clientY);
+    var dx = p.x - anchorX;
+    var dy = p.y - anchorY;
+
+    var rawTheta = Math.atan2(dx, Math.max(dy, 1));
+    theta = clampTheta(rawTheta);
+
+    var dist = Math.sqrt(dx * dx + dy * dy);
+    L = Math.min(dist, L0 + maxExtraStretch);
+    L = Math.max(L, 24);
+
+    omega = theta - lastTheta;
+    lastTheta = theta;
+}
+
+function onPointerUp(e){
+    if (!isDragging || e.pointerId !== pointerId) return;
+    isDragging = false;
+    pointerId = null;
+    card.classList.remove('fd-dragging');
+
+    // convert last frame's angular delta into a velocity estimate
+    omega = omega * 26;
+    if (omega > 6) omega = 6;
+    if (omega < -6) omega = -6;
+}
+
+card.addEventListener('pointerdown', onPointerDown);
+window.addEventListener('pointermove', onPointerMove);
+window.addEventListener('pointerup', onPointerUp);
+window.addEventListener('pointercancel', onPointerUp);
+
+window.addEventListener('resize', measure);
+
+measure();
+applyTransform();
+requestAnimationFrame(step);
+
+})();
+</script>
+
+<!--кнопка назад-->
+<script>
+function navBackOrHome() {
+    // если есть история переходов внутри сайта — идём назад
+    if (document.referrer && document.referrer.includes(window.location.hostname)) {
+    window.history.back();
+    } else {
+      // если открыли страницу напрямую (например, по прямой ссылке) — на главную
+    window.location.href = 'index.html';
+    }
+}
+</script>
+
+    </div>
+
+<footer>
+        <div class="blocks container">
+            <div>
+            <span class="logo">KINDland</span>
+            <p>Этот сайт, посвещенный странам мира.<br>Разработано Алексеем Добрым</p>
+            
+            <br>
+                kindland.com
+            
+            </div>
+        <div>
+            <h4>О нас</h4>
+            <ul>
+                <li><a href="about.html">Наша миссия</a></li>
+                <li><a href="Об авторе.html">Об авторе</a></li>
+                <li><a href="страны.html">Все страны</a></li>
+                <li><a href="новости.html">Новости</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Обратная связь</h4>
+            <p>Email:dobrodeevalekse2@gmail.com</p>
+            <p><a href="https://vk.ru/kiiiiind">VK</a></p>
+            <p><a href="https://web.telegram.org/k/#@kiiiiiiiiiind">Telegram</a></p>
+            <p><a href="https://www.instagram.com/kind_8083?igsh=MXV6c3pkeW9idGJlaA%3D%3D&utm_source=qr">Instagram</a></p>
+        </div>
+        </div>
+        <hr>
+        <p>® 2026 KINDLAND | Все права защищены</p>
+    </footer>
+
+
+
+</body>
+</html>
