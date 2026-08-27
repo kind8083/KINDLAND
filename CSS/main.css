@@ -1990,6 +1990,7 @@ html {
     text-align: center;
     box-shadow: 0 3px 10px rgba(2,136,209,0.25);
     transition: transform 0.25s ease;
+    cursor: pointer;
 }
 .geo-sea-card:hover { 
     transform: translateY(-6px); 
@@ -5125,9 +5126,14 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
     box-sizing: border-box;
 }
  
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
     /* хедер сверстан на float, не на flex — просто убираем float у nav,
-       чтобы пункты меню не сжимались в половину экрана */
+       чтобы пункты меню не сжимались в половину экрана. Раньше это
+       работало только на телефоне (700px), но nav (width:50%; без wrap)
+       вылезал за контейнер уже на планшете — расширяем до 1024px */
+    header {
+        padding: 30px 0;
+    }
     header .logo {
         display: block;
         text-align: center;
@@ -5163,8 +5169,12 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
  
 /* ---------- ШАПКА СТРАНЫ: ФЛАГ / ГЕРБ / ЯКОРНОЕ МЕНЮ (.italy2) ---------- */
 /* используется и Италией, и Францией. На десктопе — абсолютное
-   позиционирование с фиксированными px, на мобиле собираем в колонку */
-@media (max-width: 700px) {
+   позиционирование с фиксированными px (top:600px, right:120px и т.д.),
+   рассчитанными на контейнер 1400px. На планшете (700-1024px) контейнер
+   уже сильно уже, а офсеты остаются теми же — флаг/герб/меню наезжают
+   поверх текста италии1. Раньше в колонку собирали только с 700px,
+   расширяем до 1024px, чтобы планшеты тоже получали чистую колонку */
+@media (max-width: 1024px) {
     .italy2 {
         position: static;
         display: flex;
@@ -5346,10 +5356,8 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
     .hero--info p {
         font-size: 16px;
     }
-    .glb-section {
-        width: 40%;
-        text-align: center;
-    }
+    
+    
 }
 /* ---------- КАРТОЧКИ СТРАН (index.html и страны.html — класс .games общий) ---------- */
 /* display:flex без wrap + фиксированная ширина картинки 300px —
@@ -5522,6 +5530,70 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
         float: none;
         display: block;
         margin: 20px auto 0;
+    }
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+
+    .geo-sea-card.active,
+    .color-card.active,
+    .fr-sea-card.active,
+    .fr-color-card.active {
+        transform: translateY(-6px);
+    }
+
+    .geo-sea-card.active p,
+    .color-card.active p,
+    .fr-sea-card.active p,
+    .fr-color-card.active p {
+        max-height: 150px;
+        opacity: 1;
+        margin-top: 8px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- ПРАЗДНИКИ: сетка карточек в 2 колонки становится тесной на узких телефонах ---------- */
+@media (max-width: 480px) {
+    .It-holidays-grid,
+    .It-holidays-grid-usa,
+    .It-holidays-grid-isp {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Плашки с иконкой слева (флаг/герб факты, праздничный хедер) — в столбик на маленьких телефонах ---------- */
+@media (max-width: 480px) {
+    .It-holiday-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ---------- Страховка от горизонтального скролла на любых мобильных экранах ---------- */
+@media (max-width: 1024px) {
+    html, body {
+        overflow-x: hidden;
     }
 }
 
