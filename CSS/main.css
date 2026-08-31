@@ -5532,13 +5532,19 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
 
 @media (max-width: 1000px) {
 
-    .geo-sea-card,
-    .color-card,
-    .fr-sea-card,
-    .fr-color-card {
-        display: block;
+    .geo-sea-card p,
+    .fr-sea-card p {
+        max-height: none;
+        opacity: 1;
+        margin-top: 8px;
     }
 
+    .color-card p,
+    .fr-color-card p {
+        max-height: none;
+        opacity: 1;
+        margin-top: 10px;
+    }
     
 
 }
@@ -5560,6 +5566,8 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
         font-size: 1rem;
     }
 }
+
+
 
 
 
