@@ -5335,6 +5335,159 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
 
 
 
+/*-------анимация-------*/
+/* ===== Анимация появления контента при заходе на сайт ===== */
+
+@keyframes kl-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header.container,
+.hero--info h2,
+.hero--info h1,
+.hero--info p,
+.hero--info .btn,
+.glb-section {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+}
+
+header.container { animation-delay: 0s; }
+.hero--info h2    { animation-delay: 0.15s; }
+.hero--info h1    { animation-delay: 0.3s; }
+.hero--info p     { animation-delay: 0.45s; }
+.hero--info .btn  { animation-delay: 0.6s; }
+.glb-section      { animation-delay: 0.4s; }
+
+
+
+/* ===== Анимация hero-блока на страницах Италии и Франции ===== */
+
+@keyframes kl-zoom-out {
+    from { transform: scale(1.12); }
+    to   { transform: scale(1); }
+}
+
+.it-hero img,
+.fr-hero img {
+    animation: kl-zoom-out 1.2s ease forwards;
+}
+
+.it-hero-content,
+.fr-hero-content {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.it-quick-facts,
+.fr-quick-facts {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+    animation-delay: 0.55s;
+}
+
+/* ===== Анимация — страница "Страны" (страны.html) ===== */
+
+.contri {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+    animation-delay: 0.15s;
+}
+
+.games {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+}
+
+.games:nth-of-type(1) { animation-delay: 0.3s; }
+.games:nth-of-type(2) { animation-delay: 0.45s; }
+.games:nth-of-type(3) { animation-delay: 0.6s; }
+
+
+/* ===== Анимация — страница "Новости" (новости.html) ===== */
+
+.news-intro {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+    animation-delay: 0.15s;
+}
+
+.news-card {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+}
+
+.news-card:nth-of-type(1) { animation-delay: 0.35s; }
+.news-card:nth-of-type(2) { animation-delay: 0.5s; }
+.news-card:nth-of-type(3) { animation-delay: 0.65s; }
+
+
+/* ===== Анимация — страница "Контакты" (contacts.html) ===== */
+
+.hero-contacts h1 {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+    animation-delay: 0.15s;
+}
+
+.hero-contacts .cont {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.work .blocks .block {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+}
+
+.work .blocks .block:nth-of-type(1) { animation-delay: 0.45s; }
+.work .blocks .block:nth-of-type(2) { animation-delay: 0.6s; }
+.work .blocks .block:nth-of-type(3) { animation-delay: 0.75s; }
+
+.hero-contacts img {
+    animation: kl-zoom-out 1.2s ease forwards;
+}
+
+.feedback {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+
+/* ===== Анимация — страница "О сайте" (about.html) ===== */
+
+.hero-about .info h1,
+.hero-about .info p,
+.hero-about .info .btn {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+}
+
+.hero-about .info h1   { animation-delay: 0.15s; }
+.hero-about .info p    { animation-delay: 0.3s; }
+.hero-about .info .btn { animation-delay: 0.45s; }
+
+.hero-about img {
+    animation: kl-zoom-out 1.2s ease forwards;
+}
+
+.work .blo {
+    opacity: 0;
+    animation: kl-fade-up 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+
 
 
 
