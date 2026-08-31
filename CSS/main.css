@@ -5375,11 +5375,7 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
         width: 100%;
     }
 }
-@media (max-width: 560px) {
-    .trending .games .block {
-        width: 100%;
-    }
-}
+
  
 /* вступительный текст на странице "Страны мира" — 60% ширины + 20% паддинга
    с каждой стороны специально сужают колонку, на мобиле это лишнее */
@@ -5481,7 +5477,7 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
 
 
 /* адаптив: колонка справа остаётся справа на любом экране, просто сужается */
-  @media (max-width: 860px){
+  @media (max-width: 800px){
     .layout{
       grid-template-columns: 1fr 220px;
       gap:20px;
@@ -5534,24 +5530,35 @@ background: linear-gradient(0deg,rgba(52, 59, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 
-@media (hover: none) and (pointer: coarse) {
+@media (max-width: 1000px) {
 
-    .geo-sea-card.active,
-    .color-card.active,
-    .fr-sea-card.active,
-    .fr-color-card.active {
-        transform: translateY(-6px);
+    .geo-sea-card,
+    .color-card,
+    .fr-sea-card,
+    .fr-color-card {
+        display: block;
     }
 
-    .geo-sea-card.active p,
-    .color-card.active p,
-    .fr-sea-card.active p,
-    .fr-color-card.active p {
-        max-height: 150px;
-        opacity: 1;
-        margin-top: 8px;
-    }
+    
 
+}
+
+@media (max-width: 1350px) {
+    .italy2 {
+        display: none;
+    }
+    .it-hero, .fr-hero {
+        margin-top: 50px;
+    }
+}
+
+/*кнопка назад*/
+@media (max-width: 1500px) {
+    .nav-back-btn {
+        left: 20px;
+        top: 100px;
+        font-size: 1rem;
+    }
 }
 
 
