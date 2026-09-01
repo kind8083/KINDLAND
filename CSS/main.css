@@ -5943,6 +5943,9 @@ header.container { animation-delay: 0s; }
     .it-hero, .fr-hero {
         margin-top: 50px;
     }
+    .glb1-eyebrow {
+        margin-top: 50px;
+    }
 }
 
 /*кнопка назад*/
